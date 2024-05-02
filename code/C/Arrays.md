@@ -125,7 +125,16 @@ int * vetor = ( int * ) malloc ( sizeof ( int ) * 5 );
   free ( vetor ); 
 */
 
-// Forma de alocação
+// A forma de preenchimento, permanece a mesma da discutida no vetor estático
+// mas, precisa-se ressaltar o seguinte detalhe abaixo, no preenchimento manual
+// do vetor: 
+vetor [ 0 ] = 9;
+vetor [ 1 ] = 8;
+vetor [ 2 ] = 7;
+vetor [ 3 ] = 6;
+// Note que nada me impede de adicionar vetor [ 4 ] = 5, ou até mesmo vetor [ 5 ] = 4,
+// portanto tome muito cuidado com a forma que você está preenchendo, e sempre verifique
+// para o usuário ou o próprio programador não causar um problema de buffer overflow.
 
 
 ```
