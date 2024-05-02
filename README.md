@@ -4,11 +4,11 @@ Nesse repositório estão disponibilizadas as possíveis implementações dos al
 
 ### Tipos Abstratos de Dados
 
-| LINGUAGENS | Arrays | Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
+| **LINGUAGENS**| Arrays | Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
 |:----------:|:------:|:------:|:-----:|:--------------:|:-------:|:------:|
-| C          |  |  |  |  |  |  |
-| C++        |  |  |  |  |  |  |
-| Java       |  |  |  |  |  |  |
-| Python     |  |  |  |  |  |  |
+| *C*          |  |  |  |  |  |  |
+| *C++*        |  |  |  |  |  |  |
+| *Java*       |  |  |  |  |  |  |
+| *Python*     |  |  |  |  |  |  |
 
 ### Algoritmos de Ordenação
