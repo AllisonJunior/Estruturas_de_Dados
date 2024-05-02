@@ -7,6 +7,11 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 ### Declaração e Inicialização
 ```main.c
+/*
+  Aqui está sendo utilizado um vetor do tipo inteiro, mas poderia
+  ser um 'char', 'float', 'double' e até mesmo um TAD.
+*/
+
 // Declaração de vetor não preenchido 
 int vetor [ 5 ];
 
@@ -19,6 +24,11 @@ int vetor [ 5 ] = { 0 };
 
 ### Formas de Preenchimento
 ```main.c
+/*
+  Aqui está sendo considerado um vetor do tipo inteiro, que
+  não está preenchido e possui um tamanho total de 5.
+*/
+
 // Preenchimento de forma manual
 vetor [ 0 ] = 9;
 vetor [ 1 ] = 8;
@@ -47,8 +57,6 @@ do
 }
 while ( i < 5 );
 ```
-
-
 
 # Dinamic Array
 
