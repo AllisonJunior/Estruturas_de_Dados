@@ -60,8 +60,73 @@ while ( i < 5 );
 
 # Dinamic Array
 
-### Declaração 
+### Declaração e Inicialização
 ```main.c
+/*
+   Aqui só estão expostas como esse tipo de vetor dinâmico pode
+   ser inicializado, portanto a explicação detalhada está na próxima
+   sessão, explicando passo a passo.
+*/
+
+// Declaração de vetor não inicializado
+int * vetor;
+
+// Declaração de vetor nulado
+int * vetor = NULL;
+
+// Declaração inicializada para um vetor de 5 posições
+int * vetor = ( int * ) malloc ( sizeof ( int ) * 5 ); 
+```
+
+### Alocação e Formas de Preenchimento
+```main.c
+/*
+  Como funciona o processo de alocação de memória para um dado qualquer em C?
+  Utilizando as funções da biblioteca stdlib.h, no caso as funções malloc ();
+  e free (); Para respectivamente alocar memória e liberar memória, como será
+  discutido e mostrado abaixo;
+
+  1 - Definimos o tipodo nosso ponteiro
+  int * vetor;
+
+  2 - Iniciamos o processo de alocação, fazendo um casting para o tipo definido anteriormente
+  int * vetor = ( int * )
+
+  3 - Continuamos agora utilizando a função malloc
+  int * vetor = ( int * ) malloc ();
+
+  4 - Em seguida preenchemos o parâmetro da função malloc, que é basicamente o tamanho de memória
+  que será alocado, no caso 'sizeof ( int )'
+  int * vetor = ( int * ) malloc ( sizeof ( int ) );
+
+  5 - Por fim definimos a quantidade de espaços que serão alocados, no caso 4, que pode ser traduzido
+  como a criação de um vetor com 4 posições.
+  int * vetor = ( int * ) malloc ( sizeof ( int ) * 4 );
+
+  6 - Seguindo fazemos uma checagem para ver se o sistema conseguiu alocar corretamente, que é básicamente
+  checar se a alocação resultou em NULL
+  int * vetor = ( int * ) malloc ( sizeof ( int ) * 4 );
+  if ( NULL == vetor )
+  {
+    printf ( "- O vetor não foi alocado com sucesso!" );
+    exit ( 1 ); 
+  }
+
+  7 - Por fim após terminarmos de utilizar esse vetor, podemos liberar a memória
+  int * vetor = ( int * ) malloc ( sizeof ( int ) * 4 );
+  if ( NULL == vetor )
+  {
+    printf ( "- O vetor não foi alocado com sucesso!" );
+    exit ( 1 ); 
+  }
+
+  ...
+
+  free ( vetor ); 
+*/
+
+// Forma de alocação
+
 
 ```
 
