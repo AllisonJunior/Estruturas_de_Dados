@@ -6,9 +6,9 @@ Nesse repositório estão disponibilizadas as possíveis implementações dos al
 
 | **LINGUAGENS**| Arrays | Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
 |:----------:|:------:|:------:|:-----:|:--------------:|:-------:|:------:|
-| *C*          | <a href="code/C/Arrays.md" title="Implementação de arrays na linguagem c.">**Visualizar**</a> | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | ~~:x:~~ |
-| *C++*        | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ |
-| *Java*       | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ |
-| *Python*     | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ | ~~:x:~~ |
+| *C*          | <a href="code/C/Arrays.md" title="Implementação de arrays na linguagem c.">**Visualizar**</a> | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | :x: |
+| *C++*        | :x: | :x: | :x: | :x: | :x: | :x: |
+| *Java*       | :x: | :x: | :x: | :x: | :x: | :x: |
+| *Python*     | :x: | :x: | :x: | :x: | :x: | :x: |
 
 ### Algoritmos de Ordenação
