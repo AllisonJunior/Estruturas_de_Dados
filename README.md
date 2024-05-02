@@ -6,9 +6,9 @@ Nesse repositório estão disponibilizadas as possíveis implementações dos al
 
 | **LINGUAGENS**| Arrays | Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
 |:----------:|:------:|:------:|:-----:|:--------------:|:-------:|:------:|
-| *C*          |  |  |  |  |  |  |
-| *C++*        |  |  |  |  |  |  |
-| *Java*       |  |  |  |  |  |  |
-| *Python*     |  |  |  |  |  |  |
+| *C*          | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() |
+| *C++*        | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() |
+| *Java*       | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() |
+| *Python*     | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() | [**Visualizar**]() |
 
 ### Algoritmos de Ordenação
