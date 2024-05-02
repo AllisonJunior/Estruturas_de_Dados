@@ -135,8 +135,8 @@ vetor [ 3 ] = 6;
 // Note que nada me impede de adicionar vetor [ 4 ] = 5, ou até mesmo vetor [ 5 ] = 4,
 // portanto tome muito cuidado com a forma que você está preenchendo, e sempre verifique
 // para o usuário ou o próprio programador não causar um problema de buffer overflow.
-
-
 ```
+
+# Algumas Dicas
 
 <h3 align="center"> <a href="https://github.com/AllisonJunior/Estruturas_de_Dados" title=""> Retornar a página principal </a> </h3>
