@@ -58,6 +58,36 @@ do
 while ( i < 5 );
 ```
 
+### Algumas Usabilidades
+```main.c
+
+/*
+  FUNÇÃO:      Essa função printa todos os elementos de um vetor
+  @parâmetro1: O vetor que terá seus elementos printados
+  @parâmetro2: O tamanho do vetor
+*/
+void print_Array ( int vetor [] , int tamanho )
+{
+    for ( int i = 0 ; i < tamanho ; i ++ )
+       printf ( "%d " , vetor [ i ] ); 
+}
+
+/*
+  FUNÇÃO:      Essa função retorna a soma de todos os elementos do vetor
+  @parâmetro1: O vetor que terá seus elementos somados
+  @parâmetro2: O tamanho do vetor
+*/
+int sum_Array ( int vetor [] , int tamanho )
+{
+   int soma = 0;
+
+   for ( int i = 0 ; i < tamanho ; i ++ )
+      soma += vetor [ i ];
+
+   return soma;  
+}
+```
+
 # Dinamic Array
 
 ### Declaração e Inicialização
