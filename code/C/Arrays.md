@@ -185,6 +185,10 @@ int * vetor = ( int * ) malloc ( sizeof ( int ) * 5 );
 // para o usuário ou o próprio programador não causar um problema de buffer overflow.
 ```
 
+### Algumas Usabilidades
+```main.c
+```
+
 # Algumas Dicas
 
 <h3 align="center"> <a href="https://github.com/AllisonJunior/Estruturas_de_Dados" title=""> Retornar a página principal </a> </h3>
