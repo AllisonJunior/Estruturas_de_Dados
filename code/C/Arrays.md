@@ -86,6 +86,21 @@ int sum_Array ( int vetor [] , int tamanho )
 
    return soma;  
 }
+
+/*
+  FUNÇÃO:      Essa função retorna o maior número presente em um vetor
+  @parâmetro1: O vetor que terá seus elementos checados
+  @parâmetro2: O tamanho do vetor
+*/
+int higher_value ( int vetor [] , int tamanho )
+{
+   int maior = vetor [ 0 ];
+
+   for ( int i = 0 ; i < tamanho ; i ++ )
+      if ( maior < vetor [ i ] ) maior = vetor [ i ];
+
+   return maior; 
+}
 ```
 
 # Dinamic Array
@@ -156,12 +171,15 @@ int * vetor = ( int * ) malloc ( sizeof ( int ) * 5 );
 */
 
 // A forma de preenchimento, permanece a mesma da discutida no vetor estático
-// mas, precisa-se ressaltar o seguinte detalhe abaixo, no preenchimento manual
-// do vetor: 
-vetor [ 0 ] = 9;
-vetor [ 1 ] = 8;
-vetor [ 2 ] = 7;
-vetor [ 3 ] = 6;
+// mas, precisa-se ressaltar o seguinte detalhe abaixo, não só no preenchimento
+// manual do vetor dinâmico. Em todas as outras formas de preenchimento já
+// apresentadas, precisa se levar em conta o seguinte:  
+//    vetor [ 0 ] = 9;
+//    vetor [ 1 ] = 8;
+//    vetor [ 2 ] = 7;
+//    vetor [ 3 ] = 6;
+//    vetor [ 4 ] = 5;
+//    vetor [ 5 ] = 4;
 // Note que nada me impede de adicionar vetor [ 4 ] = 5, ou até mesmo vetor [ 5 ] = 4,
 // portanto tome muito cuidado com a forma que você está preenchendo, e sempre verifique
 // para o usuário ou o próprio programador não causar um problema de buffer overflow.
