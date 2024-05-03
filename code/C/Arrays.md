@@ -168,21 +168,35 @@ int * vetor = ( int * ) malloc ( sizeof ( int ) * 5 );
   ...
 
   free ( vetor ); 
-*/
 
-// A forma de preenchimento, permanece a mesma da discutida no vetor estático
-// mas, precisa-se ressaltar o seguinte detalhe abaixo, não só no preenchimento
-// manual do vetor dinâmico. Em todas as outras formas de preenchimento já
-// apresentadas, precisa se levar em conta o seguinte:  
-//    vetor [ 0 ] = 9;
-//    vetor [ 1 ] = 8;
-//    vetor [ 2 ] = 7;
-//    vetor [ 3 ] = 6;
-//    vetor [ 4 ] = 5;
-//    vetor [ 5 ] = 4;
-// Note que nada me impede de adicionar vetor [ 4 ] = 5, ou até mesmo vetor [ 5 ] = 4,
-// portanto tome muito cuidado com a forma que você está preenchendo, e sempre verifique
-// para o usuário ou o próprio programador não causar um problema de buffer overflow.
+
+A forma de preenchimento, permanece a mesma da discutida no vetor estático
+mas, precisa-se ressaltar o seguinte detalhe abaixo, não só no preenchimento
+manual do vetor dinâmico. Em todas as outras formas de preenchimento já
+apresentadas, precisa se levar em conta o seguinte:
+
+    // Alocando memória para SÓ PARA 4 ESPAÇOS
+    int * vetor = ( int * ) malloc ( sizeof ( int ) * 4 );       
+
+    vetor [ 0 ] = 9;
+    vetor [ 1 ] = 8;
+    vetor [ 2 ] = 7;
+    vetor [ 3 ] = 6;
+    vetor [ 4 ] = 5; // Preenchendo memória não alocada
+    vetor [ 5 ] = 4; // Preenchendo memória não alocada
+
+    // Aqui teremos o print até a sessão que não foi alocada corretamente
+    for ( int i = 0 ; i < 6 ; i ++ ) printf ( "%d " , vetor [ i ] );
+ 
+Note que nada me impede de adicionar vetor [ 4 ] = 5, ou até mesmo vetor [ 5 ] = 4,
+portanto tome muito cuidado com a forma que você está preenchendo, e sempre verifique
+para o usuário ou o próprio programador não causar um problema de buffer overflow.
+
+O importante a ressaltar aqui é que fazer o que foi feito acima pode ou não resultar em
+problemas ao próprio sistema operacional, pois o buffer overflow é basicamente substituição
+ou subescrever sobre um campo de memória não alocado, então tenha muito cuidado ao trabalhar
+com ponteiros na linguagem C. 
+*/
 ```
 
 ### Algumas Usabilidades
