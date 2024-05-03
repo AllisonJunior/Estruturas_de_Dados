@@ -12,3 +12,10 @@ Nesse repositório estão disponibilizadas as possíveis implementações dos al
 | *Python*     | :x: | :x: | :x: | :x: | :x: | :x: |
 
 ### Algoritmos de Ordenação
+
+| **LINGUAGENS**| Bubble Sort | Insertion Sort | Selection Sort | Merge Sort | Quick Sort | Heap Sort |
+|:----------:|:------:|:------:|:-----:|:--------------:|:-------:|:------:|
+| *C*          | :x: | :x: | :x: | :x: | :x: | :x: |
+| *C++*        | :x: | :x: | :x: | :x: | :x: | :x: |
+| *Java*       | :x: | :x: | :x: | :x: | :x: | :x: |
+| *Python*     | :x: | :x: | :x: | :x: | :x: | :x: |
