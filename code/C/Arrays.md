@@ -153,12 +153,65 @@ int main ( void )
 }
 ```
 
-### Exemplo 3: **
+### Exemplo 3: *Manipulação de vetor atráves de funções*
 ```main.c
-```
+// Criação de constante
+# define TAMANHO_MAX 5
 
-### Exemplo 4: **
-```main.c
+# include <stdio.h>
+
+
+
+// FUNÇÃO:  Essa função preenche um vetor com base no tamanho definido
+// @PARAM1: Vetor que será preenchido
+// @PARAM2: Valor do tipo inteiro que define o tamanho do vetor a ser preenchido
+// RETORNA: nada
+void fill_V ( int vetor [] , int tamanho )
+{
+   // Preenchendo o vetor
+   for ( int i = 0 ; i < tamanho ; i ++ ) vetor [ i ] = i + 1;
+}
+
+// FUNÇÃO: Essa função printa o vetor
+// @PARAM1: Vetor que será printado
+// @PARAM2: tamanho do vetor
+// RETORNA: nada
+void print_V ( int vetor [] , int tamanho )
+{
+   // Loop para printar
+   printf ( "[ " );
+   for ( int i = 0 ; i < tamanho ; i ++ ) printf ( "%d " , vetor [ i ] );
+   printf ( "]\n" );
+}
+
+// FUNÇÃO: Essa função altera um índice do vetor
+// @PARAM1: Vetor que será alterado
+// @PARAM2: Índice do vetor que será atualizado
+// @PARAM3: novo valor
+// RETORNA: valor que foi removido
+int update_V ( int vetor [] , int index , int valor_novo )
+{
+   int removido = vetor [ index ];
+   vetor [ index ] = valor_novo;
+   return removido;
+}
+
+int main ( void )
+{
+   // Criando um vetor
+   int vetor [ TAMANHO_MAX ];
+
+   // Preenchendo o vetor
+   fill_V ( vetor , TAMANHO_MAX );
+
+   // Printando o vetor preenchido
+   print_V ( vetor , TAMANHO_MAX );
+
+   // Atualizando o índice 3 do vetor
+   int removido = update_V ( vetor , 3 , 9 );
+   print_V ( vetor , TAMANHO_MAX );
+   printf ( "- VALOR REMOVIDO: %d" , removido );
+}
 ```
 
 # Dinamic Array
