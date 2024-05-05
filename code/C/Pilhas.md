@@ -68,6 +68,7 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 ### Implementação
 ```main.c
+# include <stdio.h>
 ```
 
 # Pilha Dinâmica
