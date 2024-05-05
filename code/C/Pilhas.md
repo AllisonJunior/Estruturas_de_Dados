@@ -15,6 +15,7 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 **Suponhamos um livro qualquer, como na imagem abaixo:**
 
 
+
 # Pilha Estática
 
 # Pilha Dinâmica
