@@ -16,7 +16,7 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 int main ( void )
 {
-   // Declaração do vetor estático
+   // Declaração do vetor estático sem preencher
    int vetor [ TAMANHO_DO_VETOR ];
 
    // Preenchendo o vetor com valores fornecidos pelo usuário
