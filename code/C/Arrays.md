@@ -105,8 +105,52 @@ int main ( void )
    printf ( "\n- A soma dos números é: %d\n" , soma );
 }
 ```
-### Exemplo 2: **
+### Exemplo 2: *Imprimir um vetor de n formas distintas*
 ```main.c
+// Criação da constante
+# define TAMANHO_DO_VETOR 5
+
+# include <stdio.h>
+
+
+
+int main ( void )
+{
+   // Declaração do vetor
+   int vetor [ TAMANHO_DO_VETOR ] = { 1 , 2 , 3 , 4 , 5 };
+   
+   // Imprimindo o vetor na forma padrão
+   printf ( "FORMA PADRÃO:  [ " );
+   for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ )
+      printf ( "%d " , vetor [ i ] );
+   printf ( "]\n" );
+
+   // Imprimindo o vetor na forma inversa
+   printf("FORMA INVERSA: [ ");
+   for ( int i = TAMANHO_DO_VETOR - 1 ; i >= 0 ; i -- ) 
+      printf ( "%d " , vetor [ i ] );
+   printf ( "]\n" );
+
+   // Imprimindo o vetor substituindo valores pares por '*'
+   printf ( "FORMA PARES:   [ " );
+   for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ )
+      if ( vetor [ i ] % 2 == 0 ) printf ( "* " );
+      else                        printf ( "%d " , vetor [ i ] );
+   printf ( "]\n" );
+
+   // Imprimindo o vetor substituindo valores ímpares por '#'
+   printf ( "FORMA IMPAR:   [ " );
+   for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ )
+      if ( vetor [ i ] % 2 != 0 ) printf ( "# " );
+      else                        printf ( "%d " , vetor [ i ] );
+   printf ( "]\n" );
+
+   // Imprimindo cada elemento * 2
+   printf ( "FORMA MULTI:   [ " );
+   for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ )
+      printf ( "%d " , vetor [ i ] * 2 );
+   printf ( "]\n" );
+}
 ```
 
 ### Exemplo 3: **
