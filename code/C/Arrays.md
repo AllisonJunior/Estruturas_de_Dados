@@ -73,10 +73,10 @@ int main ( void )
    // Para alterar a matriz assim como no vetor, como no exemplo abaixo basta,
    // definir nos colchetes as linhas e colunas que serão preenchidas:
    int vetor [ 2 ] [ 2 ];
-   vetor [ 0 ] [ 0 ] = 1;
-   vetor [ 0 ] [ 1 ] = 2;
-   ...
-   vetor [ 1 ] [ 1 ] = 4; 
+   vetor [ 0 ] [ 0 ] = 1; // 1 0  0 0 
+   vetor [ 0 ] [ 1 ] = 2; // 1 2  0 0
+   vetor [ 1 ] [ 0 ] = 3; // 1 2  3 0  
+   vetor [ 1 ] [ 1 ] = 4; // 1 2  3 4
 }
 ```
 
