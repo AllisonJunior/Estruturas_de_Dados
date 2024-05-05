@@ -43,7 +43,17 @@ int main ( void )
 
 
 int main ( void )
-{   
+{
+   /*
+     Aqui se coloca em mente o seguinte fato:
+
+     1. Declaração do tipo e nome da variável;
+     2. Definição da quantidade de linhas;
+     3. Definição da quantidade de colunas; 
+   */
+   // Declaração não inicializada
+   int matr [ 3 ] [ 2 ];
+   char matr [ 4 ] [ 20 ]; // Similar a char ** matr;
 }
 ```
 
