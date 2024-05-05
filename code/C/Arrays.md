@@ -2,12 +2,51 @@
 
 A linguagem de programação C possui duas formas distintas de se criar um <a href="Arrays.md" title="vetor ou uma matriz">**array**</a>, sendo primeiramente de forma <a href="Arrays.md" title="o vetor/matriz possui um tamanho máximo fixo">**estática**</a> e a outra de forma <a href="Arrays.md" title="o vetor/matriz pode ser expandido ou reduzido">**dinâmica**</a>. Portanto em resumo aqui serão apresentadas ambas as formas de como os <a href="Arrays.md" title="vetores/matrizes">**arrays**</a> podem ser implementados e utilizados, junto a um pequeno sumário abaixo para melhorar sua navegação pela página.
 
+- <a href="#introdução" title="Introdução a arrays">**Introdução**</a>
 - <a href="#static-array" title="Vetor estático">**Static Array**</a>
 - <a href="#dinamic-array" title="Direto">**Dinamic Array**</a>
 - <a href="#bidimensional-static-array" title="Direto">**Bidimensional Static Array**</a>
 - <a href="#bidimensional-dinamic-array" title="Direto">**Bidimensional Dinamic Array**</a>
 
 ---
+
+# Introdução
+
+### *Vetores/Arrays*
+```main.c
+# include <stdio.h>
+
+
+
+int main ( void )
+{
+   // Declaração não inicializada
+   int vetor [ 10 ];
+   char vetor [ 20 ];
+   struct qualquer vetor [ 10 ]; // struct qualquer { int v1; char v2; };
+   Pilha vetor [ 10 ];
+   char * vetor [ 10 ];
+
+   // Declaração inicializada
+   int vetor [] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 };
+   char vetor [ 10 ] = { '#' , '#' , '@' , '!' , '*' , '$' , '%' , '+' , '-' , '^' };
+   struct qualquer vetor [ 2 ] = { { 1 , 'c' } , { 2 , 'd' } }; // struct qualquer { int v1; char v2; };
+   Pilha vetor [ 2 ] = { { 0 } , { 0 } }; // Inicializando as duas posições zeradas
+   char * vetor [ 3 ] = { "The"  , "song of" , "my life!" };
+}
+```
+
+### *Matrizes/Bidimensional Arrays*
+```main.c
+# include <stdio.h>
+
+
+
+int main ( void )
+{   
+}
+```
+
 
 # Static Array
 
@@ -46,6 +85,17 @@ int main ( void )
       soma += vetor [ i ];
    printf ( "\n- A soma dos números é: %d\n" , soma );
 }
+```
+### Exemplo 2: **
+```main.c
+```
+
+### Exemplo 3: **
+```main.c
+```
+
+### Exemplo 4: **
+```main.c
 ```
 
 # Dinamic Array
