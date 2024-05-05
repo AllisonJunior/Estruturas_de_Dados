@@ -2,7 +2,13 @@
 
 A linguagem de programação C possui duas formas distintas de se criar um <a href="Arrays.md" title="vetor ou uma matriz">**array**</a>, sendo primeiramente de forma <a href="Arrays.md" title="o vetor/matriz possui um tamanho máximo fixo">**estática**</a> e a outra de forma <a href="Arrays.md" title="o vetor/matriz pode ser expandido ou reduzido">**dinâmica**</a>. Portanto em resumo aqui serão apresentadas ambas as formas de como os <a href="Arrays.md" title="vetores/matrizes">**arrays**</a> podem ser implementados e utilizados. 
 
-<a href="#dinamic-array" title="Direto">**Tp**</a>
+- <a href="#static-array" title="Direto">**Static Array**</a>
+  - <a href="#static-array" title="Direto">**Exemplo 1:**</a> *Soma de valores em um vetor*.
+- <a href="#dinamic-array" title="Direto">**Dinamic Array**</a>
+- <a href="#bidimensional-static-array" title="Direto">**Bidimensional Static Array**</a>
+- <a href="#bidimensional-dinamic-array" title="Direto">**Bidimensional Dinamic Array**</a>
+
+---
 
 # Static Array
 
