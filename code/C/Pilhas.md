@@ -68,6 +68,7 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 ### Implementação
 ```main.c
+// Constantes
 # define MAX_CAPACITY  4
 # define CHEIA         3
 # define VAZIA        -1
