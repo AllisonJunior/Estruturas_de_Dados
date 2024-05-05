@@ -14,9 +14,6 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 ### *Vetores/Arrays*
 ```main.c
-/*
-*/
-
 # include <stdio.h>
 
 
