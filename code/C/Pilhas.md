@@ -38,10 +38,42 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 ![STATE_1](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/c29de8e6-9b40-46dc-adec-41f2b90d7360)
 
-**Apesar da analógia não ser tão perfeita, a ideia de pilha é basicamente essa, você irá estacar / empilhar <a href="Pilhas.md" title="valores do tipo inteiro, strings, números reais e até mesmo dados de dados">**dados**</a>** de tal forma que sempre que você desejar acessar uma posição específica caso esteja abaixo de alguma outra, essa outra terá que ser removida da pilha, com o objetivo de acessar aquele dado específico. 
+**Apesar da analógia não ser tão perfeita, a ideia de pilha é basicamente essa, você irá estacar / empilhar <a href="Pilhas.md" title="valores do tipo inteiro, strings, números reais e até mesmo dados de dados">**dados**</a> de tal forma que sempre que você desejar acessar uma posição específica diferentemente de um vetor/array, você não poderá acessar aquela posição diretamente e alterar-lá, será necessário remover o último elemento continuamente até chegar na posição desejada, o que basiscamente é o princípio de <a href="Pilhas.md" title="Last In, First Out: o último elemento inserido é o primeiro a ser removido.">**LIFO**</a>.** 
+
+### Para concluir, podemos levantar as seguintes dúvidas: *como posso usar uma pilha no contexto de computação e quais benefícios e desvantagens seu uso trás?*
+
+### **UTILIDADE** 
+
+- **Implementação de Funções Recursivas:** *As pilhas são frequentemente usadas para implementar chamadas de função recursiva. Cada chamada de função é empilhada e processada quando as chamadas recursivas retornam.*
+- **Expressões Matemáticas e Avaliação de Expressões Postfixas:** *Pilhas são úteis para a avaliação de expressões postfixas (notação polonesa reversa) e na conversão entre notações infixa, prefixa e postfixa.*
+- **Gerenciamento de Memória:** *Em linguagens de programação que não têm coleta de lixo automática, as pilhas são usadas para gerenciar a alocação e desalocação de memória.*
+- **Navegação em Profundidade em Estruturas de Dados:** *Ao percorrer estruturas de dados como árvores ou grafos em profundidade, as pilhas podem ser usadas para armazenar os nós que ainda precisam ser explorados.*
+- **Desfazer Operações:** *Pilhas são usadas para implementar a funcionalidade "desfazer" em muitos aplicativos, onde as operações são empilhadas conforme são executadas e desempilhadas quando o usuário deseja desfazer uma ação.*
+
+### **BENEFÍCIOS**
+
+- Simplicidade: Pilhas são estruturas de dados simples e fáceis de entender e implementar.
+- Eficiência de Espaço: Elas geralmente usam uma quantidade fixa de memória para armazenar os elementos, tornando o uso de memória eficiente.
+- Eficiência de Tempo: As operações de inserção (push) e remoção (pop) em uma pilha têm complexidade de tempo constante (O(1)), tornando-as rápidas.
+- Reversão de Ordem: A natureza LIFO das pilhas é útil em situações em que a ordem reversa de processamento é necessária.
+
+### **DESVANTAGENS**
+
+- Limitação de Capacidade: Pilhas têm um tamanho fixo e podem estourar se forem empilhados muitos elementos, levando a problemas de estouro de pilha.
+- Limitação de Funcionalidade: Elas são adequadas apenas para determinados tipos de problemas e podem não ser a estrutura de dados ideal em todas as situações.
+- Complexidade de Implementação Recursiva: Em alguns casos, a implementação de algoritmos recursivos usando pilhas pode ser mais complexa do que uma abordagem iterativa.
+- Acesso Limitado aos Elementos: A menos que você esteja implementando uma pilha com acesso aleatório, como uma pilha vinculada, o acesso aos elementos fora do topo da pilha pode ser limitado.
 
 # Pilha Estática
 
-# Pilha Dinâmica
+### Implementação
+```main.c
+```
 
+# Pilha Dinâmica
+```main.c
+```
+
+<h3 align="center"> <a href="#pilhas" title="Voltar ao topo"> Retornar ao topo </a> </h3>
+<h3 align="center"> <a href="https://github.com/AllisonJunior/Estruturas_de_Dados" title="Voltar ao menu principal"> Retornar a página principal </a> </h3>
 
