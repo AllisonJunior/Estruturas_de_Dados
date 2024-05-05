@@ -13,6 +13,7 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 # Introdução
 
 ### *Vetores/Arrays*
+Um vetor é uma estrutura de dados que armazena uma coleção de elementos do mesmo tipo, organizados sequencialmente na memória. Também conhecido como array, um vetor permite armazenar múltiplos valores sob um único nome de variável.
 ```main.c
 # include <stdio.h>
 
@@ -35,6 +36,11 @@ int main ( void )
    Pilha vetor [ 2 ] = { { 0 } , { 0 } }; // Inicializando as duas posições zeradas
    char * vetor [ 3 ] = { "The"  , "song of" , "my life!" };
    int * vetor = ( int * ) malloc ( sizeof ( int ) * quantidade_de_elementos );
+
+   // Para alterar o vetor, basta seguir o exemplo abaixo, onde o que está dentro do colchete é o índice do vetor:
+   int vetor [] = { 1 , 2 , 3 };
+   vetor [ 2 ] = 34;
+   vetor [ 0 ] = 12;
 }
 ```
 
@@ -63,6 +69,14 @@ int main ( void )
    };
    Pilha matr [ 2 ] [ 2 ] = { { { 0 } , { 0 } } , { { 0 } , { 0 } } };
    char * matr [] = { "Allowed" , "Proihibited" , "Unknow" };
+
+   // Para alterar a matriz assim como no vetor, como no exemplo abaixo basta,
+   // definir nos colchetes as linhas e colunas que serão preenchidas:
+   int vetor [ 2 ] [ 2 ];
+   vetor [ 0 ] [ 0 ] = 1;
+   vetor [ 0 ] [ 1 ] = 2;
+   ...
+   vetor [ 1 ] [ 1 ] = 4; 
 }
 ```
 
