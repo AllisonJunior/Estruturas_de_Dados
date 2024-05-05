@@ -5,7 +5,7 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 # Static Array
 
-### Exemplo 1: Soma de valores em um vetor
+### Exemplo 1: *Soma de valores em um vetor*
 ```main.c
 // Criação de constante
 # define TAMANHO_DO_VETOR 5
