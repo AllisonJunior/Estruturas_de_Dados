@@ -66,8 +66,77 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 # Pilha Estática
 
-### Implementação
+### Implementação Base
 ```main.c
+# define MAX_CAPACITY  4
+# define CHEIA         3
+# define VAZIA        -1
+
+# include <stdio.h>
+# include <stdlib.h>
+
+
+
+typedef struct
+{
+       int vetor [ MAX_CAPACITY ];
+       int topo;
+}
+Pilha;
+
+Pilha init_Pilha ( void )
+{
+     Pilha pilha;
+     pilha . topo = VAZIA;
+
+     return pilha;
+}
+
+void new_Pilha ( Pilha * pilha ) { pilha -> topo = VAZIA; }
+
+void push ( Pilha * pilha , int valor )
+{
+    if ( pilha -> topo == CHEIA )
+    {
+      printf ( "- A pilha está cheia!\n" );
+      return;   
+    }
+
+    pilha -> vetor [ ++ pilha -> topo ] = valor;
+    printf ( "- Adicionado no índice da pilha %d o valor [ %d ]\n" , pilha -> topo , pilha -> vetor [ pilha -> topo ] );
+}
+
+void pop ( Pilha * pilha )
+{
+    if ( pilha -> topo == VAZIA )
+    {
+      printf ( "- A pilha está vazia!\n" );
+      return;  
+    }
+
+    printf ( "- Removido do índice %d da pilha o valor [ %d ]\n" , pilha -> topo , pilha -> vetor [ pilha -> topo ] );
+    pilha -> vetor [ pilha -> topo ] = -999;
+    pilha -> topo --;
+}
+
+int main ()
+{   
+   system ( "CHCP 65001 > nul" );
+
+   Pilha pilha; new_Pilha ( &pilha );
+   
+   push ( &pilha , 44 );
+   push ( &pilha , 55 );
+   push ( &pilha , 22 );
+   push ( &pilha , 11 );
+   push ( &pilha , 99 );
+
+   pop ( &pilha );
+   printf ( "Dado ainda está lá: %d\n" , pilha . vetor [ 3 ] );
+
+   push ( &pilha , 77 );
+   printf ( "Dado ainda está lá: %d\n" , pilha . vetor [ 3 ] );
+}
 ```
 ### Menu Interativo
 ```main.c
