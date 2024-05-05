@@ -1,6 +1,6 @@
 # Pilhas
 
-A linguagem de programação C não possui uma forma padrão de se implementar <a href="Pilhas.md" title="uma coleção linear de elementos vulgo stack">**pilhas**</a>, que seguem o princípio de <a href="Pilhas.md" title="Last In, First Out: o último elemento inserido é o primeiro a ser removido.">**LIFO**</a>, por isso utilizamos um <a href="Pilhas.md" title="Tipo Abstrato de Dado: Struct">**TAD**</a> para chegar a esse resultado, utilizando um modelo de implementação estática ou dinâmica ( A diferença fundamental no funcionamento entre uma pilha dinâmica e uma pilha estática está na gestão da memória e na forma como os elementos são armazenados ). Portanto abaixo teremos a demonstração de implementações base dessas duas formas de implementação e claro alguns exemplos de utilização, junto a um pequeno sumário abaixo para melhorar sua navegação pela página.
+A linguagem de programação C não possui uma forma padrão de se implementar <a href="Pilhas.md" title="uma coleção linear de elementos vulgo stack">**pilhas**</a>, que seguem o princípio de <a href="Pilhas.md" title="Last In, First Out: o último elemento inserido é o primeiro a ser removido.">**LIFO**</a>, por isso utilizamos um <a href="Pilhas.md" title="Tipo Abstrato de Dado: Struct">**TAD**</a> para chegar a esse resultado, utilizando um modelo de implementação estática ou dinâmica. Portanto abaixo teremos a demonstração de implementações base dessas duas formas de implementação e claro alguns exemplos de utilização, junto a um pequeno sumário abaixo para melhorar sua navegação pela página.
 
 - <a href="#introdução" title="Introdução a pilhas">**Introdução**</a>
 - <a href="#pilha-estática" title="Introdução a pilhas estáticas">**Pilha Estática**</a>
@@ -63,6 +63,10 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 - **Limitação de Funcionalidade:** *Elas são adequadas apenas para determinados tipos de problemas e podem não ser a estrutura de dados ideal em todas as situações.*
 - **Complexidade de Implementação Recursiva:** *Em alguns casos, a implementação de algoritmos recursivos usando pilhas pode ser mais complexa do que uma abordagem iterativa.*
 - **Acesso Limitado aos Elementos:** *A menos que você esteja implementando uma pilha com acesso aleatório, como uma pilha vinculada, o acesso aos elementos fora do topo da pilha pode ser limitado.*
+
+### **PILHA ESTÁTICA E DINÂMICA**
+
+A **pilha estática** é implementada usando um vetor de tamanho fixo. A inserção e remoção de elementos ocorrem apenas em uma extremidade da pilha, chamada de topo já no caso da **pilha dinâmica**, os elementos são armazenados em nós encadeados. Cada nó contém um elemento e um ponteiro para o próximo nó na pilha. O topo da pilha é representado pelo primeiro nó. Podemos concluir então o seguinte, enquanto a **pilha estática** é mais simples de implementar e mais eficiente em termos de memória, a **pilha dinâmica** oferece mais flexibilidade em termos de tamanho e é mais adequada para situações em que o tamanho máximo da pilha não é conhecido antecipadamente ou pode variar durante a execução do programa, além de permitir a expansão caso necessário.
 
 # Pilha Estática
 
@@ -405,20 +409,6 @@ while ( 1 )
 ```
 
 # Pilha Dinâmica
-
-**:**
-
-Pilha Dinâmica:
-Os elementos da pilha são armazenados em nós que são alocados dinamicamente na memória usando a função malloc.
-Cada nó contém um ponteiro para o próximo nó na pilha, permitindo que a estrutura cresça ou diminua conforme necessário.
-A inserção de um novo elemento na pilha envolve a criação de um novo nó e a atualização dos ponteiros para manter a correta ordem dos elementos.
-A remoção de um elemento da pilha envolve a liberação da memória do nó correspondente e a atualização dos ponteiros para refletir a nova configuração da pilha.
-Pilha Estática:
-Os elementos da pilha são armazenados em uma matriz ou vetor com um tamanho fixo predefinido.
-Não há alocação ou liberação de memória durante a execução do programa, já que o espaço para a pilha é alocado estaticamente em tempo de compilação.
-A inserção de um novo elemento na pilha envolve simplesmente adicionar o elemento na próxima posição disponível da matriz.
-A remoção de um elemento da pilha envolve simplesmente remover o elemento na posição mais alta da pilha.
-Em resumo, a pilha dinâmica oferece mais flexibilidade em termos de tamanho e gerenciamento de memória, enquanto a pilha estática é mais simples em termos de implementação e geralmente mais eficiente em termos de desempenho, mas com uma capacidade limitada.
 
 ### Implementação
 ```main.c
