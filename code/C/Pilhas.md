@@ -52,17 +52,17 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 ### **BENEFÍCIOS**
 
-- Simplicidade: Pilhas são estruturas de dados simples e fáceis de entender e implementar.
-- Eficiência de Espaço: Elas geralmente usam uma quantidade fixa de memória para armazenar os elementos, tornando o uso de memória eficiente.
-- Eficiência de Tempo: As operações de inserção (push) e remoção (pop) em uma pilha têm complexidade de tempo constante (O(1)), tornando-as rápidas.
-- Reversão de Ordem: A natureza LIFO das pilhas é útil em situações em que a ordem reversa de processamento é necessária.
+- **Simplicidade:** *Pilhas são estruturas de dados simples e fáceis de entender e implementar.*
+- **Eficiência de Espaço:** *Elas geralmente usam uma quantidade fixa de memória para armazenar os elementos, tornando o uso de memória eficiente.*
+- **Eficiência de Tempo:** *As operações de inserção (push) e remoção (pop) em uma pilha têm complexidade de tempo constante (O(1)), tornando-as rápidas.*
+- **Reversão de Ordem:** *A natureza LIFO das pilhas é útil em situações em que a ordem reversa de processamento é necessária.*
 
 ### **DESVANTAGENS**
 
-- Limitação de Capacidade: Pilhas têm um tamanho fixo e podem estourar se forem empilhados muitos elementos, levando a problemas de estouro de pilha.
-- Limitação de Funcionalidade: Elas são adequadas apenas para determinados tipos de problemas e podem não ser a estrutura de dados ideal em todas as situações.
-- Complexidade de Implementação Recursiva: Em alguns casos, a implementação de algoritmos recursivos usando pilhas pode ser mais complexa do que uma abordagem iterativa.
-- Acesso Limitado aos Elementos: A menos que você esteja implementando uma pilha com acesso aleatório, como uma pilha vinculada, o acesso aos elementos fora do topo da pilha pode ser limitado.
+- **Limitação de Capacidade:** *Pilhas têm um tamanho fixo e podem estourar se forem empilhados muitos elementos, levando a problemas de estouro de pilha.*
+- **Limitação de Funcionalidade:** *Elas são adequadas apenas para determinados tipos de problemas e podem não ser a estrutura de dados ideal em todas as situações.*
+- **Complexidade de Implementação Recursiva:** *Em alguns casos, a implementação de algoritmos recursivos usando pilhas pode ser mais complexa do que uma abordagem iterativa.*
+- **Acesso Limitado aos Elementos:** *A menos que você esteja implementando uma pilha com acesso aleatório, como uma pilha vinculada, o acesso aos elementos fora do topo da pilha pode ser limitado.*
 
 # Pilha Estática
 
