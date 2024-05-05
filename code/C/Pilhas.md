@@ -66,7 +66,7 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 # Pilha Estática
 
-### Implementação Base
+### Implementação
 ```main.c
 # define MAX_CAPACITY  4
 # define CHEIA         3
@@ -77,6 +77,9 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 
 
+// Aqui temos a estrutura base de uma pilha
+// estática, que contém um topo e um vetor
+// para armazenar os elementos.
 typedef struct
 {
        int vetor [ MAX_CAPACITY ];
@@ -84,6 +87,7 @@ typedef struct
 }
 Pilha;
 
+// Função de inicialização atrávez de retorno
 Pilha init_Pilha ( void )
 {
      Pilha pilha;
@@ -92,8 +96,10 @@ Pilha init_Pilha ( void )
      return pilha;
 }
 
+// Função que inicializa a pilha atrávez de referência
 void new_Pilha ( Pilha * pilha ) { pilha -> topo = VAZIA; }
 
+// Função que adiciona um valor qualquer no topo atual da pilha
 void push ( Pilha * pilha , int valor )
 {
     if ( pilha -> topo == CHEIA )
@@ -106,6 +112,7 @@ void push ( Pilha * pilha , int valor )
     printf ( "- Adicionado no índice da pilha %d o valor [ %d ]\n" , pilha -> topo , pilha -> vetor [ pilha -> topo ] );
 }
 
+// Função que remove o valor do topo da pilha
 void pop ( Pilha * pilha )
 {
     if ( pilha -> topo == VAZIA )
@@ -119,26 +126,41 @@ void pop ( Pilha * pilha )
     pilha -> topo --;
 }
 
-int main ()
-{   
-   system ( "CHCP 65001 > nul" );
+// Função que printa o vetor
+void print ( Pilha * pilha )
+{
+    printf ( "- [ " );
+    for ( int i = 0 ; i < MAX_CAPACITY ; i ++ ) printf ( "%d " , pilha -> vetor [ i ] );
+    printf ( "]\n" );
+}
 
+int main ()
+{
+   // Criação da pilha e inicialização
    Pilha pilha; new_Pilha ( &pilha );
-   
+
+   // Teste de adição e checagem para ver se está cheia 
    push ( &pilha , 44 );
    push ( &pilha , 55 );
    push ( &pilha , 22 );
    push ( &pilha , 11 );
-   push ( &pilha , 99 );
+   push ( &pilha , 99 ); // Aqui o programa deve printar um aviso
 
+   // Printando a pilha
+   print ( &pilha );
+
+   // Removendo o valor 11
    pop ( &pilha );
-   printf ( "Dado ainda está lá: %d\n" , pilha . vetor [ 3 ] );
 
+   // Adicionando no lugar vázio o valor 77
    push ( &pilha , 77 );
-   printf ( "Dado ainda está lá: %d\n" , pilha . vetor [ 3 ] );
+
+   // Printando a pilha
+   print ( &pilha );
 }
 ```
-### Menu Interativo
+
+### Implementação com um menu interativo
 ```main.c
 // Definição de Constantes
 # define CAPACIDADE_MAXIMA 4
