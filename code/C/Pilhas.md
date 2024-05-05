@@ -10,31 +10,31 @@ A linguagem de programação C não possui uma forma padrão de se implementar <
 
 # Introdução
 
-A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <a href="Pilhas.md" title="Last In, First Out: o último elemento inserido é o primeiro a ser removido.">**LIFO**</a>, portanto na sua implementação seja para qualquer tipo de <a href="Pilhas.md" title="uma coleção linear de elementos vulgo stack">**pilha**</a> ( *inteiro*, *caractere*, *string* ) e forma de alocação ( *estática* ou *dinâmica* ), iremos seguir a seguinte ideia: 
+A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <a href="Pilhas.md" title="Last In, First Out: o último elemento inserido é o primeiro a ser removido.">**LIFO**</a>, portanto na sua implementação seja para qualquer tipo de <a href="Pilhas.md" title="uma coleção linear de elementos vulgo stack">**pilha**</a> ( *inteiro*, *caractere*, *string* ) e forma de alocação ( *estática* ou *dinâmica* ), iremos ter a implementação das funções *pop* e *push*, que respectivamente significam *remover* e *adicionar*, além de algumas outras funções como a de *print* para listar todos os elementos da pilha, *is_full* para checar se está cheia e várias outras. Nesse caso aqui iremos focar somente nas funções *pop* e *push* pois as mesmas utilizam o **topo** ou **índice** da pilha como base para executar suas manipulações, portanto vamos seguir com a seguinte ideia:
 
-**Suponhamos um livro "LIVRO 0", como na imagem abaixo:**
+**Suponhamos um livro "LIVRO 0", como na imagem abaixo ( Esse séria nosso primeiro elemento, o que também indicaria um topo = 0 ):**
 
 ![STATE_1](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/c29de8e6-9b40-46dc-adec-41f2b90d7360)
 
-**Como se pode ver, ele está sozinho e caso eu desejasse o pegar não teria complicação alguma, mas vamos supor que eu empilhei outro livro em cima do "LIVRO 0" no caso o "LIVRO 1", como dá para ver abaixo:**
+**Como se pode ver, ele está sozinho e caso eu desejasse o pegar não teria complicação alguma ( pois nosso topo é igual ao livro atual ), mas vamos supor que eu empilhei outro livro em cima do "LIVRO 0" no caso o "LIVRO 1" ( aqui temos o uso da função push ), como dá para ver abaixo ( teríamos uma atualização no topo, que de 0 foi para 1 ):**
 
 ![STATE_2](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/73e961b0-67a8-41cc-b764-42bb60875c2c)
 
-**Agora temos 2 livros empilhados! Mas vamos supor novamente que eu comprei outro livro "LIVRO 2" e decidi empilhar ele, teríamos o seguinte:**
+**Agora temos 2 livros empilhados! Mas vamos supor novamente que eu comprei outro livro "LIVRO 2" e decidi empilhar ele, teríamos o seguinte ( o topo que era 1 virou 2 ):**
 
 ![STATE_3](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/7dc0ca73-1b32-4b65-b506-d4881f3745cc)
 
-**Como dá para ver empilhamos 2 livros em cima do "LIVRO 0", mais e aí como eu faço para pegar ele? Eu preciso remover todos os livros que estão em cima dele!**
+**Como dá para ver empilhamos 2 livros em cima do "LIVRO 0", mais e aí como eu faço para pegar ele? Eu preciso remover todos os livros que estão em cima dele ( usando a função pop )!**
 
 ***1º PASSO - Desejo retirar o "LIVRO 0"***
 
 ![STATE_3](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/7dc0ca73-1b32-4b65-b506-d4881f3745cc)
 
-***2º PASSO - Retiro o "LIVRO 2" de cima do "LIVRO 1" pois ele está em cima:***
+***2º PASSO - Retiro o "LIVRO 2" de cima do "LIVRO 1" pois ele está em cima ( ou pop ( &livros ) ):***
 
 ![STATE_2](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/73e961b0-67a8-41cc-b764-42bb60875c2c)
 
-***3º PASSO - Retiro o "LIVRO 1" de cima do "LIVRO 0". Assim conseguimos acessar o "LIVRO 0"!***
+***3º PASSO - Retiro o "LIVRO 1" de cima do "LIVRO 0" ( ou pop ( &livros ) ). Assim conseguimos acessar o "LIVRO 0"!***
 
 ![STATE_1](https://github.com/AllisonJunior/Estruturas_de_Dados/assets/114815898/c29de8e6-9b40-46dc-adec-41f2b90d7360)
 
