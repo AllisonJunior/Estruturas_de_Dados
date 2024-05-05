@@ -10,6 +10,11 @@ A linguagem de programação C não possui uma forma padrão de se implementar <
 
 # Introdução
 
+A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <a href="Pilhas.md" title="Last In, First Out: o último elemento inserido é o primeiro a ser removido.">**LIFO**</a>, portanto na sua implementação seja para qualquer tipo de <a href="Pilhas.md" title="uma coleção linear de elementos vulgo stack">**pilha**</a> ( *inteiro*, *caractere*, *string* ) e forma de alocação ( *estática* ou *dinâmica* ), iremos seguir a seguinte ideia: 
+
+**Suponhamos um livro qualquer, como na imagem abaixo:**
+
+
 # Pilha Estática
 
 # Pilha Dinâmica
