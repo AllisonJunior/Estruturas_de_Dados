@@ -20,21 +20,25 @@ int main ( void )
    int vetor [ TAMANHO_DO_VETOR ];
 
    // Preenchendo o vetor com valores fornecidos pelo usuário
-   printf ( "Digite %d números: \n" , TAMANHO_DO_VETOR );
+   printf ( "[ MENU INTERATIVO - SOMA DE NÚMEROS DE UM VETOR ]\n\n" );
    for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ )
+   {
+      printf ( "- Digite o valor do %dº número: " , i + 1 );
       scanf ( "%d" , &vetor [ i ] );
+      setbuf ( stdin , NULL ); // Similar ao fflush ( stdin );
+   }
    
    // Imprimindo os elementos do vetor
-   printf ( "Os números digitados foram: \n" );
+   printf ( "\n- Os números digitados foram: [ " );
    for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ ) 
       printf ( "%d " , vetor [ i ] );
-   printf ( "\n" );
+   printf ( "]\n" );
 
    // Calculando a soma dos elementos do vetor
    int soma = 0;
    for ( int i = 0 ; i < TAMANHO_DO_VETOR ; i ++ ) 
       soma += vetor [ i ];
-   printf ( "A soma dos números é: %d\n" , soma );
+   printf ( "\n- A soma dos números é: %d\n" , soma );
 }
 ```
 
