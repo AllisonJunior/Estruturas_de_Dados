@@ -14,6 +14,9 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 ### *Vetores/Arrays*
 ```main.c
+/*
+*/
+
 # include <stdio.h>
 
 
@@ -46,17 +49,6 @@ int main ( void )
 
 int main ( void )
 {
-   /*
-     Aqui se coloca em mente o seguinte fato:
-
-     1. Declaração do tipo e nome da variável;
-     2. Definição da quantidade de linhas;
-     3. Definição da quantidade de colunas;
-
-     E na parte de inicialização só basta compor
-     as inserções de dados como se fossem conjuntos.
-   */
-
    // Declaração não inicializada
    int matr [ 3 ] [ 2 ];
    char matr [ 4 ] [ 20 ]; // Aqui temos um vetor de strings, funciona similar a char * matr [ 20 ] e char ** matr;
