@@ -56,6 +56,7 @@ int main ( void )
      E na parte de inicialização só basta compor
      as inserções de dados como se fossem conjuntos.
    */
+
    // Declaração não inicializada
    int matr [ 3 ] [ 2 ];
    char matr [ 4 ] [ 20 ]; // Aqui temos um vetor de strings, funciona similar a char * matr [ 20 ] e char ** matr;
