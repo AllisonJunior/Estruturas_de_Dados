@@ -71,6 +71,8 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 ```
 
 # Pilha Dinâmica
+
+### Implementação
 ```main.c
 ```
 
