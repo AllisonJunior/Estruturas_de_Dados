@@ -46,4 +46,12 @@ int main ( void )
 ```main.c
 ```
 
+# Bidimensional Static Array
+```main.c
+```
+
+# Bidimensional Dinamic Array
+```main.c
+```
+
 <h3 align="center"> <a href="https://github.com/AllisonJunior/Estruturas_de_Dados" title=""> Retornar a página principal </a> </h3>
