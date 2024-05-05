@@ -45,6 +45,7 @@ int main ( void )
 ```
 
 ### *Matrizes/Bidimensional Arrays*
+Uma matriz é uma estrutura de dados bidimensional que organiza elementos em linhas e colunas. Assim como os vetores, as matrizes são usadas para armazenar dados do mesmo tipo, mas enquanto os vetores são uma coleção unidimensional, as matrizes são uma coleção bidimensional.
 ```main.c
 # include <stdio.h>
 
