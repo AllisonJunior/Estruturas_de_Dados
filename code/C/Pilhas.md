@@ -415,96 +415,135 @@ while ( 1 )
 # include <stdio.h>
 # include <stdlib.h>
 
-// Definição da estrutura do nó da pilha
-typedef struct Node
-{
-       int valor;         // Dado a ser armazenado
-       struct Node* next; // Ponteiro para o próximo nó
-}
-Node;
 
-// Definição da estrutura da pilha
-typedef struct Stack {
-    Node* top;  // Ponteiro para o topo da pilha
-} Stack;
+
+// Definição da estrutura do nó da pilha
+typedef struct No
+{
+       int valor;           // Dado a ser armazenado
+       struct No * proximo; // Ponteiro para o próximo nó
+}
+No;
+
+// Definição da estrutura da pilha com um ponteiro para o topo da pilha 
+typedef struct { No * topo; } Pilha;
 
 // Função para criar um novo nó
-Node* createNode(int data) {
-    Node* newNode = (Node*)malloc(sizeof(Node)); // Aloca memória para o novo nó
-    if (newNode == NULL) {
-        printf("Erro: Não foi possível alocar memória.\n");
-        exit(EXIT_FAILURE);
+No * criar_No ( int valor )
+{
+    // Aloca memória para o novo nó ( vulgo node ) e faz a checagem de invalidação de alocação
+    No * novo_Node = ( No * ) malloc ( sizeof ( No ) );  
+    if ( NULL == novo_Node ) 
+    {
+      printf ( "- Não foi possível alocar memória para o nó!\n" );
+      exit ( EXIT_FAILURE ); // Encerramos a aplicação por ser um erro grave
     }
-    newNode->data = data; // Define o dado do novo nó
-    newNode->next = NULL; // Inicializa o próximo como NULL
-    return newNode;
+
+    // Prosseguimos com a inicialização
+    novo_Node -> valor = valor;  // Define o dado do novo nó
+    novo_Node -> proximo = NULL; // Inicializa o próximo como NULL
+    
+    // Retornamos o nó criado / inicializado
+    return novo_Node;
 }
 
 // Função para inicializar a pilha
-Stack* createStack() {
-    Stack* stack = (Stack*)malloc(sizeof(Stack)); // Aloca memória para a pilha
-    if (stack == NULL) {
-        printf("Erro: Não foi possível alocar memória.\n");
-        exit(EXIT_FAILURE);
+Pilha * criar_Pilha ( void ) 
+{
+    // Aloca memória para a pilha e checa se deu erro
+    Pilha * nova_Pilha = ( Pilha * ) malloc ( sizeof ( Pilha ) );
+    if ( NULL == nova_Pilha ) 
+    {
+      printf ( "- Não foi possível alocar memória para a pilha!\n");
+      exit ( EXIT_FAILURE ); // Erro grave, portanto encerra o programa
     }
-    stack->top = NULL; // Inicializa o topo da pilha como NULL (pilha vazia)
-    return stack;
+    
+    // Inicializa o topo da pilha como NULL (pilha vazia)
+    nova_Pilha -> topo = NULL; 
+
+    // Retorna nossa pilha inicializada
+    return nova_Pilha;
 }
 
-// Função para verificar se a pilha está vazia
-int isEmpty(Stack* stack) {
-    return (stack->top == NULL); // Retorna 1 se a pilha estiver vazia, senão retorna 0
-}
+// Função para verificar se a pilha está vazia - 1 está vazia senão 0
+int isEmpty ( Pilha * pilha_referenciada ) { return ( pilha_referenciada -> topo == NULL ); }
 
 // Função para empilhar um elemento na pilha
-void push(Stack* stack, int data) {
-    Node* newNode = createNode(data); // Cria um novo nó com o dado fornecido
-    newNode->next = stack->top; // Define o próximo do novo nó como o antigo topo da pilha
-    stack->top = newNode; // Define o novo nó como o topo da pilha
+void push ( Pilha * pilha_referenciada , int valor ) 
+{
+    // Cria um novo nó com o dado fornecido
+    No * novo_Node = criar_No ( valor );  
+
+    // Define o próximo do novo nó como o antigo topo da pilha
+    novo_Node -> proximo = pilha_referenciada -> topo; 
+
+    // Define o novo nó como o topo da pilha
+    pilha_referenciada -> topo = novo_Node; 
 }
 
 // Função para desempilhar um elemento da pilha
-int pop(Stack* stack) {
-    if (isEmpty(stack)) {
-        printf("Erro: Pilha vazia, não é possível desempilhar.\n");
-        exit(EXIT_FAILURE);
+int pop ( Pilha * pilha_referenciada ) 
+{
+    // Checagem para ver se a pilha está cheia  
+    if ( isEmpty ( pilha_referenciada ) ) 
+    {
+      printf ( "- Pilha está vazia, não é possível desempilhar.\n");
+      return 0;
     }
-    int data = stack->top->data; // Armazena o dado do topo da pilha
-    Node* temp = stack->top; // Armazena o topo da pilha em um nó temporário
-    stack->top = stack->top->next; // Atualiza o topo da pilha para o próximo nó
-    free(temp); // Libera a memória do nó desempilhado
-    return data; // Retorna o dado desempilhado
+
+    // Armazena o dado do topo da pilha
+    int valor = pilha_referenciada -> topo -> valor; 
+
+    // Armazena o topo da pilha em um nó temporário
+    No * node_temporario = pilha_referenciada -> topo; 
+    
+    // Atualiza o topo da pilha para o próximo nó
+    pilha_referenciada -> topo = pilha_referenciada -> topo -> proximo; 
+    
+    // Libera a memória do nó desempilhado
+    free ( node_temporario ); 
+
+    // Retorna o dado desempilhado
+    return valor; 
 }
 
 // Função para visualizar o elemento no topo da pilha
-int peek(Stack* stack) {
-    if (isEmpty(stack)) {
-        printf("Erro: Pilha vazia, não há elementos para visualizar.\n");
-        exit(EXIT_FAILURE);
-    }
-    return stack->top->data; // Retorna o dado do topo da pilha
+int peek ( Pilha * pilha_referenciada ) 
+{   
+   // Checagem para ver se a pilha está cheia  
+   if ( isEmpty ( pilha_referenciada ) ) 
+   {
+     printf ( "- Pilha está vazia, não é possível visualizar o elemento do topo!\n");
+     return 0;
+   }
+
+   // Retorna o dado do topo da pilha
+   return pilha_referenciada -> topo -> valor; 
 }
 
-// Função principal
-int main() {
-    Stack* stack = createStack(); // Cria uma nova pilha
+int main ( void ) 
+{
+    // Cria uma nova pilha
+    Pilha * stack = criar_Pilha (); 
 
-    // Empilhando alguns elementos
-    push(stack, 10);
-    push(stack, 20);
-    push(stack, 30);
+    // Empilhando alguns elementos para testar
+    push ( stack , 10 );
+    push ( stack , 20 );
+    push ( stack , 30 );
+    push ( stack , 40 );
+    push ( stack , 99 );
 
     // Visualizando o elemento no topo da pilha
-    printf("Elemento no topo da pilha: %d\n", peek(stack));
+    printf ( "- Elemento no topo da pilha: %d\n" , peek ( stack ) );
 
     // Desempilhando um elemento
-    printf("Elemento desempilhado: %d\n", pop(stack));
+    printf ( "- Elemento desempilhado:     %d\n" , pop ( stack ) );
 
     // Visualizando o elemento no topo da pilha após a desempilhamento
-    printf("Elemento no topo da pilha: %d\n", peek(stack));
+    printf ( "- Elemento no topo da pilha: %d\n", peek ( stack ) );
 
     // Liberando a memória da pilha
-    free(stack);
+    free ( stack );
 }
 ```
 
