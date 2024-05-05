@@ -239,7 +239,8 @@ void clear ( void )
 
 int main ()
 {   
-   // Portuguese-fix for gcc 
+   // Use isso para permitir acentuação no seu console
+   // caso esteja usando windows, senão estiver remova  
    system ( "CHCP 65001 > nul" ); 
 
    // Declaração e inicialização da Pilha
@@ -251,7 +252,9 @@ int main ()
 
 while ( 1 )
 {
-     // Limpa a tela
+     // Limpa a tela - caso seu local de teste não
+     // tenha compatibilidade com limpeza de tela
+     // remova!
      clear ();
 
      // Print do Menu Interativo + input
