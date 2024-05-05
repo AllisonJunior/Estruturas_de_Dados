@@ -68,7 +68,245 @@ A ídeia de pilhas como já discutido anteriormente, consiste no príncipio de <
 
 ### Implementação
 ```main.c
+```
+### Menu Interativo
+```main.c
+// Definição de Constantes
+# define CAPACIDADE_MAXIMA 4
+# define CHEIA             3
+# define VAZIA            -1
+
 # include <stdio.h>
+# include <stdlib.h>
+
+
+
+/*
+  TAD: Pilha
+
+  int vetor [ CAPACIDADE_MAXIMA ];
+     - Aqui básicamente é onde iremos empilhar
+     - nossos valores. 
+
+  int topo; 
+     - Aqui é o índice de posicionamento na 
+     - pilha, ou seja, o topo;
+*/
+typedef struct
+{
+       int vetor [ CAPACIDADE_MAXIMA ];
+       int topo;
+}
+Pilha;
+
+
+/*
+  FUNC: Esta função é uma inicializadora de dado tipo Pilha
+        atráves de um dado retornado.
+  ---
+  S/@PARAM
+  ---
+  RETURN: Uma pilha criada é retornada.
+*/
+Pilha init_Pilha ( void )
+{
+     // Inicializando a pilha diretamente
+     Pilha nova_pilha = { { 0 } , -1 };
+
+     // Retornando a pilha criada
+     return nova_pilha;
+}
+
+
+/*
+  FUNC: Esta função é uma inicializadora de dado tipo Pilha
+        atráves de referência direta.
+  ---
+  @PARAM1: Um ponteiro de dado Pilha.
+  ---
+  RETURN: nada é retornado.
+*/
+void new_Pilha ( Pilha * pilha ) 
+{
+    // Modificando a pilha que foi referênciada
+    pilha -> topo = VAZIA; 
+}
+
+
+/*
+  FUNC: Esta função faz a inserção de um valor na Pilha.
+  ---
+  @PARAM1: Um ponteiro de dado Pilha.
+  @PARAM2: Um valor do tipo inteiro.
+  ---
+  RETURN: nada é retornado.
+*/
+void push ( Pilha * pilha , int valor )
+{
+    // se a pilha está cheia NÃO adicione!
+    if ( pilha -> topo == CHEIA )
+    {
+      printf ( "\n* A pilha está cheia, libere espaço se quiser adicionar algo!\n\n" );
+      system ( "pause" );
+      return;   
+    }
+   
+    // Inserção direta na pilha
+    pilha -> vetor [ ++ pilha -> topo ] = valor;
+    printf ( "\n* Adicionado no índice da pilha %d o valor [ %d ]\n\n" , pilha -> topo , pilha -> vetor [ pilha -> topo ] );
+    
+    // Pausa
+    system ( "pause" );
+}
+
+
+/*
+  FUNC: Esta função faz a remoção de um dado da Pilha.
+  ---
+  @PARAM1: Um ponteiro de dado Pilha.
+  ---
+  RETURN: nada é retornado.
+*/
+void pop ( Pilha * pilha )
+{ 
+    // se a pilha está vazia NÃO remova! 
+    if ( pilha -> topo == VAZIA )
+    {
+      printf ( "* A pilha está vazia, adicione algo para depois remover!\n\n" );
+      system ( "pause" );
+      return;  
+    }
+    
+    // Remoção de valor da pilha
+    printf ( "\n* Removido do índice %d da pilha o valor [ %d ]\n\n" , pilha -> topo , pilha -> vetor [ pilha -> topo ] );
+    pilha -> topo --;
+
+    // Pausa
+    system ( "pause" );
+}
+
+
+/*
+  FUNC: Esta função faz um print da Pilha.
+  ---
+  @PARAM1: Um ponteiro de dado Pilha.
+  ---
+  RETURN: nada é retornado.
+*/
+void print_Pilha ( Pilha * pilha )
+{
+    // Print do estado da pilha
+    printf ( "\n- Estado da pilha:     " );
+    if ( pilha -> topo == VAZIA )      printf ( "Vazia\n" );
+    else if ( pilha -> topo == CHEIA ) printf ( "Cheia\n" );
+    else                               printf ( "Ocupada\n" );
+    
+    // Print da capacidade da pilha
+    printf ( "- Capacidade da pilha: %d\n" , CAPACIDADE_MAXIMA );   
+    
+    // Print do topo da pilha
+    printf ( "- Topo da pilha:       %d" , pilha -> topo );   
+    
+    // Print dos elementos na pilha
+    printf ( "\n- Elementos na Pilha:  [ " );
+    for ( int i = 0 ; i < CAPACIDADE_MAXIMA ; i ++ ) printf ( "%d " , pilha -> vetor [ i ] );
+    printf ( "]\n\n" );
+
+    // Pause
+    system ( "pause" );
+}
+
+
+/*
+  FUNC: Esta função limpa tela com base no sistema
+       operacional.
+  ---
+  s/@PARAM
+  ---
+  RETURN: nada é retornado.
+*/
+void clear ( void )
+{
+    # ifdef _WIN32
+    system ( "cls" );
+    # elif _WIN64
+    system ( "cls" ); 
+    # else
+    system ( "clear" );
+    # endif 
+}
+
+
+int main ()
+{   
+   // Portuguese-fix for gcc 
+   system ( "CHCP 65001 > nul" ); 
+
+   // Declaração e inicialização da Pilha
+   Pilha pilha = init_Pilha ();
+
+   // Variáveis de suporte
+   int user_input = 0;
+   int user_push = 0;
+
+while ( 1 )
+{
+     // Limpa a tela
+     clear ();
+
+     // Print do Menu Interativo + input
+     printf 
+     (
+           "[ TESTE DE PILHA ESTÁTICA ]\n\n"
+           "1 - Mostrar Pilha.\n"    
+           "2 - Adicionar um valor.\n"    
+           "3 - Remover um valor.\n"    
+           "4 - Encerrar aplicação.\n\n"    
+           "--> O que deseja fazer: "
+     );
+     scanf ( "%d" , &user_input );
+     setbuf ( stdin , NULL );
+   
+     // Gerenciando a escolha do usuário com switch
+     // para simplificar o processo de checagem
+     switch ( user_input )
+     {
+           // Mostrar as informações da pilha
+           case 1: 
+
+               print_Pilha ( &pilha );
+         
+           break;
+        
+           // Execução da função PUSH
+           case 2: 
+
+               printf ( "\n- Qual valor você deseja adicionar: " );
+               scanf ( "%d" , &user_push );
+               setbuf ( stdin , NULL );
+             
+               push ( &pilha , user_push );
+
+           break;
+         
+           // Execução da função POP
+           case 3: 
+             
+               pop ( &pilha );      
+
+           break;
+         
+           // Usuário está encerrando a aplicação
+           case 4: 
+         
+               clear ();
+               printf ( "- Obrigado por testar essa aplicação\n" );
+               exit ( 0 );
+
+           break; 
+   }
+}
+}
 ```
 
 # Pilha Dinâmica
