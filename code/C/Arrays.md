@@ -26,6 +26,7 @@ int main ( void )
    struct qualquer vetor [ 10 ]; // struct qualquer { int v1; char v2; };
    Pilha vetor [ 10 ];
    char * vetor [ 10 ];
+   int * vetor; 
 
    // Declaração inicializada
    int vetor [] = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 };
@@ -33,6 +34,7 @@ int main ( void )
    struct qualquer vetor [ 2 ] = { { 1 , 'c' } , { 2 , 'd' } }; // struct qualquer { int v1; char v2; };
    Pilha vetor [ 2 ] = { { 0 } , { 0 } }; // Inicializando as duas posições zeradas
    char * vetor [ 3 ] = { "The"  , "song of" , "my life!" };
+   int * vetor = ( int * ) malloc ( sizeof ( int ) * quantidade_de_elementos );
 }
 ```
 
@@ -49,11 +51,28 @@ int main ( void )
 
      1. Declaração do tipo e nome da variável;
      2. Definição da quantidade de linhas;
-     3. Definição da quantidade de colunas; 
+     3. Definição da quantidade de colunas;
+
+     E na parte de inicialização só basta compor
+     as inserções de dados como se fossem conjuntos.
    */
    // Declaração não inicializada
    int matr [ 3 ] [ 2 ];
-   char matr [ 4 ] [ 20 ]; // Similar a char ** matr;
+   char matr [ 4 ] [ 20 ]; // Aqui temos um vetor de strings, funciona similar a char * matr [ 20 ] e char ** matr;
+   struct qualquer matr [ 2 ] [ 3 ];
+   Pilha matr [ 3 ] [ 5 ];
+   char * matr [];
+
+   // Declaração inicializada
+   int matr [ 3 ] [ 2 ] = { { 1 , 2 } , { 3 , 4 } , { 5 , 6 } };
+   char matr [ 3 ] [ 20 ] = { { "Robson" } , { "Adair" } , { "Cleusa" } };
+   struct qualquer matr [ 2 ] [ 3 ] =
+   {
+         { { 1 , 'a' } , { 2 , 'b' } , { 3 , 'c' } },
+         { { 4 , 'd' } , { 5 , 'e' } , { 6 , 'f' } }
+   };
+   Pilha matr [ 2 ] [ 2 ] = { { { 0 } , { 0 } } , { { 0 } , { 0 } } };
+   char * matr [] = { "Allowed" , "Proihibited" , "Unknow" };
 }
 ```
 
