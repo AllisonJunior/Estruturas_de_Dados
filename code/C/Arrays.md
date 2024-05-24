@@ -6,6 +6,11 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 # Vetores
 
+### Sintaxe
+```main.c
+
+```
+
 ### Variáveis Primitivas
 ```main.c
 ```
