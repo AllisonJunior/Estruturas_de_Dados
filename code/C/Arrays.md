@@ -49,8 +49,8 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
   isso é válido para qualquer tipo de dado que venha a se tornar
   uma matriz, como no exemplo abaixo:
 
-double matriz_de_doubles [ 2 ] [ 2 ];
-gwyin matriz_de_gwyins [ 32 ] [ 10 ];
+  double matriz_de_doubles [ 2 ] [ 2 ];
+  gibba matriz_de_gibba [ 32 ] [ 10 ];
 */
 ```
 
