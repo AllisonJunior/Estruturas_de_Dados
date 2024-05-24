@@ -63,7 +63,23 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
   }
   while ( i < tamanho_do_vetor )
 
-  *Por fim temos a manipulação por referência,
+  *Por fim temos a manipulação por referência, que se trata
+  do uso de um vetor como parâmetro de uma função:
+
+  void list_vetor ( int vetor [] , int tamanho_do_vetor )
+  {
+      for ( int i = 0 ; i < tamanho_do_vetor ; i ++ ) printf ( "%d " , vetor [ i ] );
+  }
+
+  void do_stuff ( int vetor [] , int tamanho_do_vetor )
+  {
+  }
+
+  int main ( void )
+  { 
+     int vetor_de_int [ 4 ];
+  }
+   
 */
 ```
 
