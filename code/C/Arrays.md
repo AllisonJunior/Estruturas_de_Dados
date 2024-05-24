@@ -66,20 +66,30 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
   *Por fim temos a manipulação por referência, que se trata
   do uso de um vetor como parâmetro de uma função:
 
-  void list_vetor ( int vetor [] , int tamanho_do_vetor )
+  void print_vetor ( int vetor [] , int tamanho_do_vetor )
   {
       for ( int i = 0 ; i < tamanho_do_vetor ; i ++ ) printf ( "%d " , vetor [ i ] );
   }
 
+  // Função que soma +1 para cada elemento do vetor
   void do_stuff ( int vetor [] , int tamanho_do_vetor )
-  {
-  }
+  {   
+      for ( int i = 0 ; i < tamanho_do_vetor ; i ++ ) vetor [ i ] ++;
+  }   
 
   int main ( void )
   { 
      int vetor_de_int [ 4 ];
-  }
+
+     // Print inicial
+     print_vetor ( vetor_de_int , 4 ); 
+
+     // Modificando
+     do_stuff ( vetor_de_int , 4 );
    
+     // Print após modificação
+     print_vetor ( vetor_de_int , 4 );  
+  }
 */
 ```
 
