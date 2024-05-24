@@ -47,6 +47,51 @@ for ( int i = 0 ; i < 10 ; i ++ ) vetorD [ i ] = i + ( 0.45 * i );
 
 ### Estruturas/TADs
 ```main.c
+// TAD: Representação de um ponto
+typedef struct { int x; int y; } Point;
+
+// TAD: Dados de uma pessoa
+struct Pint { int id; int valor; int capacity; };
+
+int main ( void )
+{
+   // Vetor de TAD com typedef 
+   Point cursor [ 4 ] = { 0 };
+   Point pixels [] = { { 0 , 1 } , { 10 , 3 } };
+
+   // Preenchendo o TAD cursor
+   for ( int i = 0 ; i < 4 ; i ++ )
+   {
+      cursor [ i ] . x = i + 1;
+      cursor [ i ] . y = i * 2;
+   }
+
+   // Printando o TAD pixels
+   for ( int i = 0 ; i < 2 ; i ++ )
+      printf ( "%d -> [%0.2d,%0.2d]\n" , i , pixels [ i ] . x , pixels [ i ] . y );
+      
+   
+
+   // Vetor de TAD sem typedef
+   struct Pint random_test [ 10 ];
+   struct Pint random_vars [] = 
+   { 
+         { 202200132 , 14 , 22 }, 
+         { 231002202 , 33 , 32 } 
+   };
+
+   // Preenchendo o TAD clientes
+   for ( int i = 0 ; i < 10 ; i ++ )
+   {
+      random_test [ i ] . id = 202200000 + ( i * 32 );
+      random_test [ i ] . valor = i * ( 100 + 32 );
+      random_test [ i ] . capacity = i * 10;
+   }   
+
+   // Printando o TAD random_vars
+   for ( int i = 0 ; i < 2 ; i ++ )
+      printf ( "{%d %d %d}\n" , random_vars [ i ] . id , random_vars [ i ] . valor , random_vars [ i ] . capacity );
+}
 ```
 
 ### Ponteiros
