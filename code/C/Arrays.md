@@ -11,12 +11,12 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 /*
   DECLARAÇÃO:
 
-  Para se fazer qualquer declaração de vetor em c, seguimos
+  *Para se fazer qualquer declaração de vetor em c, seguimos
   a seguinte ideia:
 
   <tipo> <nome_do_vetor> <[tamanho_do_vetor]>
 
-  isso é válido para qualquer tipo de dado que venha a ser 
+  *Isso é válido para qualquer tipo de dado que venha a ser 
   um vetor, como no exemplo abaixo:
 
   int vetor_de_inteiros [ 4 ];
@@ -26,13 +26,13 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
   COMO USAR/MANIPULAR:
 
-  Um vetor pode ser utilizado/manipulado das seguintes formas:
+  *Um vetor pode ser utilizado/manipulado das seguintes formas:
 
   1 - Acesso direto.
   2 - Loops de iteração.
   3 - Referência.
   
-  Onde, acesso direto se refere a ação de se alterar diretamente
+  *Onde, acesso direto se refere a ação de se alterar diretamente
   um índice do vetor, como abaixo:
 
   int vetor_de_int [ 4 ];
@@ -41,7 +41,7 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
   vetor_de_int [ 2 ] = 10;
   vetor_de_int [ 3 ] = 14;
 
-  Já os loops de iteração, são basicamente o uso de 'while', 'for'
+  *Já os loops de iteração, são basicamente o uso de 'while', 'for'
   'do while', com uma variável auxiliar, como nos exemplos abaixo:
 
   // Vetor de exemplo
@@ -63,7 +63,7 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
   }
   while ( i < tamanho_do_vetor )
 
-  Por fim temos a manipulação por referência,
+  *Por fim temos a manipulação por referência,
 */
 ```
 
