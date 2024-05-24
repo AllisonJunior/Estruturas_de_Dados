@@ -74,7 +74,7 @@ void print ( Pilha * pilha )
     printf ( "]\n" );
 }
 
-int main ()
+int main ( void )
 {
    // Criação da pilha e inicialização
    Pilha pilha; new_Pilha ( &pilha );
