@@ -8,7 +8,18 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 ### Sintaxe
 ```main.c
+/*
+  Para se fazer qualquer declaração de vetor em c, seguimos
+  a seguinte ideia:
 
+  <tipo> <nome_do_vetor> <[tamanho_do_vetor]>
+
+  isso é válido para qualquer tipo de dado que venha a ser 
+  um vetor, como no exemplo abaixo:
+*/
+
+int vetor_de_inteiros [ 4 ];
+blob vetor_de_blobs [ 3 ];
 ```
 
 ### Variáveis Primitivas
