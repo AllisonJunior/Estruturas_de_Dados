@@ -121,6 +121,76 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 double matriz_de_doubles [ 2 ] [ 2 ];
 gwyin matriz_de_gwyins [ 32 ] [ 10 ];
+
+--------------------------------------------------------------
+
+COMO USAR/MANIPULAR:
+
+*Assim como o vetor, a matriz também pode ser manipulada de forma
+direta, por loops e até mesmo por referências, como nos exemplos abaixo:
+
+// ACESSO DIRETO //
+float matriz_de_float [ 2 ] [ 2 ];
+  
+matriz_de_float [ 0 ] [ 0 ] = 12.34;
+matriz_de_float [ 0 ] [ 1 ] = 22.76;
+
+matriz_de_float [ 1 ] [ 0 ] = 45.12;
+matriz_de_float [ 1 ] [ 1 ] = 71.45;
+
+double matriz_de_double [ 2 ] [ 3 ] =
+{
+      { 0.75 , 0.32 , 0.11 },
+      { 9.45 , 4.11 , 2.32 }
+};
+
+// LOOPS //
+# define LINHAS  2
+# define COLUNAS 2
+int matriz_de_int [ LINHAS ] [ COLUNAS ];
+
+for ( int l = 0 ; l < LINHAS  ; l ++ )
+for ( int c = 0 ; c < COLUNAS ; c ++ )
+{
+   if ( l == 1 && c == 0 ) printf ( "\n" );
+   printf ( "%.02d " , matriz_de_int [ l ] [ c ] );
+}
+
+// REFERÊNCIA //
+
+// Printando a matriz
+void print_matriz ( int l , int c , int matriz [ l ] [ c ] )
+{
+    for ( int lin = 0 ; lin < l ; lin ++ )
+    for ( int col = 0 ; col < c ; col ++ ) 
+    {
+       if ( lin == 1 && col == 0 ) printf ( "\n" );
+       printf ( "%.02d " , matriz [ lin ] [ col ] );
+    }   
+}
+
+// Preenchendo a matriz
+void fill_matriz ( int l , int c , int matriz [ l ] [ c ] )
+{
+    int increase = 1;
+
+    for ( int lin = 0 ; lin < l ; lin ++ )
+    for ( int col = 0 ; col < c ; col ++ , increase ++ ) 
+       matriz [ lin ] [ col ] = increase;
+}
+
+int main ( void )
+{
+   // Matriz não inicializada
+   int matriz [ 2 ] [ 3 ];
+
+   // Preenchendo a matriz
+   fill_matriz ( 2 , 3 , matriz );
+   
+   // Printando a matriz
+   print_matriz ( 2 , 3 , matriz );
+}
+
 ```
 
 ### Variáveis Primitivas
