@@ -36,6 +36,22 @@ blob vetor_de_blobs [ 3 ];
 
 # Matrizes
 
+### Sintaxe
+```main.c
+/*
+  Para se fazer qualquer declaração de uma matriz em c, seguimos
+  a seguinte ideia:
+
+  <tipo> <nome_da_matriz> <[linhas_da_matriz]> <[colunas_da_matriz]>
+
+  isso é válido para qualquer tipo de dado que venha a se tornar
+  uma matriz, como no exemplo abaixo:
+*/
+
+double matriz_de_doubles [ 2 ] [ 2 ];
+gwyin matriz_de_gwyins [ 32 ] [ 10 ];
+```
+
 ### Variáveis Primitivas
 ```main.c
 ```
