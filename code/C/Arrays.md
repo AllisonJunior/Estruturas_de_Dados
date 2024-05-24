@@ -53,6 +53,8 @@ typedef struct { int x; int y; } Point;
 // TAD: Dados de uma pessoa
 struct Pint { int id; int valor; int capacity; };
 
+
+
 int main ( void )
 {
    // Vetor de TAD com typedef 
@@ -70,8 +72,6 @@ int main ( void )
    for ( int i = 0 ; i < 2 ; i ++ )
       printf ( "%d -> [%0.2d,%0.2d]\n" , i , pixels [ i ] . x , pixels [ i ] . y );
       
-   
-
    // Vetor de TAD sem typedef
    struct Pint random_test [ 10 ];
    struct Pint random_vars [] = 
