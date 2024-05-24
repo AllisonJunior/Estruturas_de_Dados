@@ -8,7 +8,7 @@ Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode a
 
 | **LINGUAGENS**| Arrays | Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
 |:----------:|:------:|:------:|:-----:|:--------------:|:-------:|:------:|
-| *C*          | :x: | <a href="code/C/Pilhas.md" title="Implementação de pilhas na linguagem c.">**Visualizar**</a> | :x: | :x: | :x: | :x: |
+| *C*          | <a href="code/C/Pilhas.md" title="Implementação de arrays/vetores na linguagem c.">**Visualizar**</a> | <a href="code/C/Arrays.md" title="Implementação de pilhas na linguagem c.">**Visualizar**</a> | :x: | :x: | :x: | :x: |
 | *C++*        | :x: | :x: | :x: | :x: | :x: | :x: |
 | *Java*       | :x: | :x: | :x: | :x: | :x: | :x: |
 | *Python*     | :x: | :x: | :x: | :x: | :x: | :x: |
