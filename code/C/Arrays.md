@@ -26,6 +26,23 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
 ### Variáveis Primitivas
 ```main.c
+// Declaração
+int vetorI [ 3 ];
+char vetorC [] = { '#' , '#' , '#' , '!' };
+float vetorF [ 5 ] = { 1.2 , 3.4 , 2.1 , 9.2 , 5.6 };
+double vetorD [ 10 ];
+
+// Preenchendo um vetor de 'inteiros'
+for ( int i = 0 ; i < 3 ; i ++ ) vetorI [ i ] += 1;
+
+// Printando o vetor de 'caracteres'
+for ( int i = 0 ; i < 4 ; i ++ ) printf ( "%c " , vetorC [ i ] );
+
+// Printando o vetor de 'floats'
+for ( int i = 0 ; i < 5 ; i ++ ) printf ( "%.1f " , vetorF [ i ] ); 
+
+// Preenchendo um vetor de 'doubles'
+for ( int i = 0 ; i < 10 ; i ++ ) vetorD [ i ] = i + ( 0.45 * i );
 ```
 
 ### Estruturas/TADs
