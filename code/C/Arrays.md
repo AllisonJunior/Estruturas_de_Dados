@@ -1,6 +1,6 @@
 # Arrays
 
-A linguagem de programação C possui duas formas distintas de se criar um <a href="Arrays.md" title="vetor ou uma matriz">**array**</a>, tanto na forma <a href="Arrays.md" title="o vetor/matriz possui um tamanho máximo fixo">**estática**</a> como na forma <a href="Arrays.md" title="o vetor/matriz pode ser expandido ou reduzido">**dinâmica**</a>. Um <a href="Arrays.md" title="vetor ou uma matriz">**array**</a> nada mais é do que uma coleção de variáveis do mesmo tipo que são acessadas atráves de um índice, ou seja, é muito útil para armazenar dados de uma maneira sequencial. 
+A linguagem de programação C possui duas formas distintas de se criar um <a href="Arrays.md" title="vetor ou uma matriz">**array**</a>, tanto na forma <a href="Arrays.md" title="o vetor/matriz possui um tamanho máximo fixo">**estática**</a> como na forma <a href="Arrays.md" title="o vetor/matriz pode ser expandido ou reduzido">**dinâmica**</a>. Um <a href="Arrays.md" title="vetor ou uma matriz">**array**</a> nada mais é do que uma coleção de variáveis do mesmo tipo que são acessadas atráves de um índice (*índice esse que sempre começa a partir de zero!*), ou seja, é muito útil para armazenar dados de uma maneira sequencial. 
 
 ---
 
@@ -9,6 +9,8 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 ### Sintaxe
 ```main.c
 /*
+  DECLARAÇÃO:
+
   Para se fazer qualquer declaração de vetor em c, seguimos
   a seguinte ideia:
 
@@ -16,10 +18,53 @@ A linguagem de programação C possui duas formas distintas de se criar um <a hr
 
   isso é válido para qualquer tipo de dado que venha a ser 
   um vetor, como no exemplo abaixo:
-*/
 
-int vetor_de_inteiros [ 4 ];
-blob vetor_de_blobs [ 3 ];
+  int vetor_de_inteiros [ 4 ];
+  blob vetor_de_blobs [ 3 ];
+
+--------------------------------------------------------------
+
+  COMO USAR/MANIPULAR:
+
+  Um vetor pode ser utilizado/manipulado das seguintes formas:
+
+  1 - Acesso direto.
+  2 - Loops de iteração.
+  3 - Referência.
+  
+  Onde, acesso direto se refere a ação de se alterar diretamente
+  um índice do vetor, como abaixo:
+
+  int vetor_de_int [ 4 ];
+  vetor_de_int [ 0 ] = 12;
+  vetor_de_int [ 1 ] = 18;
+  vetor_de_int [ 2 ] = 10;
+  vetor_de_int [ 3 ] = 14;
+
+  Já os loops de iteração, são basicamente o uso de 'while', 'for'
+  'do while', com uma variável auxiliar, como nos exemplos abaixo:
+
+  // Vetor de exemplo
+  int vetor_de_int [ 4 ];
+  int tamanho_do_vetor = 4;
+   
+  // Utilizando um loop do tipo for
+  for ( int i = 0 ; i < tamanho_do_vetor ; i ++ ) vetor_de_int [ i ] += 1;
+
+  // Utilizando um loop do tipo while
+  int i = 0;
+  while ( i < tamanho_do_vetor ) vetor_de_int [ i ] += 1;
+
+  // Utilizando um do tipo do while
+  int i = 0;
+  do
+  {
+    vetor_de_int [ i ] += i;
+  }
+  while ( i < tamanho_do_vetor )
+
+  Por fim temos a manipulação por referência,
+*/
 ```
 
 ### Variáveis Primitivas
