@@ -1,6 +1,8 @@
 # Algoritmos de Estruturas de Dados
 
-Nesse repositório estão disponíveis as implementações e informações sobre os algoritmos que comumente são discutidos e utilizados tanto na computação como na própria disciplina de ***Estrutura De Dados***. Nessa seção principal estão disponíveis as implementações desses algoritmos junto a algumas dicas, observações e possíveis utilizações dos mesmos, só basta clicar na seção desejada. Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode acessar a **[WIKI](https://github.com/AllisonJunior/Estruturas_de_Dados/wiki)** lá estão disponibilizados os mesmos algoritmos, só que de uma forma muito mais detalhada, além de conteúdo adicional.
+Nesse repositório estão disponíveis as implementações e informações sobre os algoritmos que comumente são discutidos e utilizados tanto na computação como na própria disciplina de ***Estrutura De Dados***. Essa seção principal funciona como um hub (Basta clicar nas seções e navegar), aqui estão disponíveis as implementações dos principais algoritmos em diversas linguagens de programação (Paradigmas de programação distintos) de forma bem simplificada.
+
+Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode acessar a nossa **[WIKI](https://github.com/AllisonJunior/Estruturas_de_Dados/wiki)** lá está disponibilizado todos os algoritmos aqui presentes de uma forma mais detalhada e com conteúdo adicional.
 
 ### Tipos Abstratos de Dados
 
