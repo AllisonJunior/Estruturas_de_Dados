@@ -14,7 +14,6 @@ A linguagem de programação C não possui uma forma padrão de se implementar <
 # define VAZIA        -1
 
 # include <stdio.h>
-# include <stdlib.h>
 
 
 
