@@ -96,6 +96,34 @@ int main ( void )
 
 ### Ponteiros
 ```main.c
+
+/* ALOCAÇÃO DE PONTEIRO PARA VETOR DE INTEIROS */
+
+int main ( void )
+{
+   // Quantidade de elementos do vetor
+   int elements = 5;
+
+   // Ponteiro de inteiro que será alocado para um vetor
+   int * vetor;
+
+   // Inicializando um vetor de inteiros com 5 elementos
+   vetor = ( int * ) malloc ( sizeof ( int ) * elements );
+
+   // Preenchendo o nosso vetor
+   vetor [ 0 ] = 10;
+   vetor [ 1 ] = 20;
+   vetor [ 2 ] = 30;
+   vetor [ 3 ] = 40;
+   vetor [ 4 ] = 50;
+
+   // Podemos printar para testar
+   for ( int i = 0 ; i < elements ; i ++ ) printf ( "%d " , vetor [ i ] );
+
+   // Após utilizarmos o nosso vetor, o desalocamos para liberar
+   // memória ( sempre faça isso quando alocar )
+   free ( vetor );
+}
 ```
 
 # Matrizes
