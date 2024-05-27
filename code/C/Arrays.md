@@ -197,11 +197,42 @@ int main ( void )
 
   double matriz_de_doubles [ 2 ] [ 2 ];
   gibba matriz_de_gibba [ 32 ] [ 10 ];
+
+  * LEMBRE-SE: Na declaração em c de uma matriz, se não for definido
+  a quantidade de linhas, no mínimo deve ser inserida a quantidade de
+  colunas, como nos dois exemplos abaixo:
+
+  - ERRADO -
+  int matriz [] [] = { { 1 , 2 } , { 3 , 4 } };
+ 
+  - CORRETO -
+  int matriz [] [ 2 ] = { { 1 , 2 } , { 3 , 4 } };
+
+  O que acontece é que na declaração de uma matriz o compilador sempre
+  requisita a quantidade de colunas que cada linha tera, por isso não
+  podemos deixar ambos sem valor e preencher diretamente!
 */
 ```
 
 ### Variáveis Primitivas
 ```main.c
+// Declaração
+int matrizI [ 3 ] [ 10 ];
+char matrizC [] [] = { '#' , '#' , '#' , '!' };
+float vetorF [ 5 ] = { 1.2 , 3.4 , 2.1 , 9.2 , 5.6 };
+double vetorD [ 10 ];
+
+// Preenchendo um vetor de 'inteiros'
+for ( int i = 0 ; i < 3 ; i ++ ) vetorI [ i ] += 1;
+
+// Printando o vetor de 'caracteres'
+for ( int i = 0 ; i < 4 ; i ++ ) printf ( "%c " , vetorC [ i ] );
+
+// Printando o vetor de 'floats'
+for ( int i = 0 ; i < 5 ; i ++ ) printf ( "%.1f " , vetorF [ i ] ); 
+
+// Preenchendo um vetor de 'doubles'
+for ( int i = 0 ; i < 10 ; i ++ ) vetorD [ i ] = i + ( 0.45 * i );
 ```
 
 ### Estruturas/TADs
