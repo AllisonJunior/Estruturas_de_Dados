@@ -217,13 +217,14 @@ int main ( void )
 ### Variáveis Primitivas
 ```main.c
 // Declaração
-int matrizI [ 3 ] [ 10 ];
-char matrizC [] [] = { '#' , '#' , '#' , '!' };
-float vetorF [ 5 ] = { 1.2 , 3.4 , 2.1 , 9.2 , 5.6 };
-double vetorD [ 10 ];
+int matrizI [ 3 ] [ 10 ]; 
+char matrizC [] [ 4 ] = { '#' , '#' , '#' , '!' };
+float vetorF [ 5 ] [ 2 ] = { { 1.2 , 3.4 } , { 2.1 , 9.2 } , { 5.6 , 3.4 } , { 47.2 , 1.2 } , { 2.9 , 1.8 } };
+double vetorD [ 2 ] [ 10 ];
 
-// Preenchendo um vetor de 'inteiros'
-for ( int i = 0 ; i < 3 ; i ++ ) vetorI [ i ] += 1;
+// Preenchendo uma matriz de 'inteiros'
+for ( int l = 0 ; l < 3 ; l ++ ) for ( int c = 0 ; c < 10 ; c ++ )
+   matrizI [ l ] [ c ] = c * 2; 
 
 // Printando o vetor de 'caracteres'
 for ( int i = 0 ; i < 4 ; i ++ ) printf ( "%c " , vetorC [ i ] );
