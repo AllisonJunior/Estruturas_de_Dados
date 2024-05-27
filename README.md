@@ -7,7 +7,7 @@ Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode a
 ### Tipos Abstratos de Dados
 
 | **LINGUAGENS**| Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
-|:----------:|:------:|:------:|:-----:|:--------------:|:-------:|:------:|
+|:----------:|:------:|:-----:|:--------------:|:-------:|:------:|
 | *C*          | <a href="code/C/Pilhas.md" title="Implementação de pilhas na linguagem c.">**Visualizar**</a> | :x: | :x: | :x: | :x: |
 | *C++*        | :x: | :x: | :x: | :x: | :x: |
 | *Java*       | :x: | :x: | :x: | :x: | :x: |
