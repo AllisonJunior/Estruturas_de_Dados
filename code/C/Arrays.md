@@ -219,21 +219,23 @@ int main ( void )
 // Declaração
 int matrizI [ 3 ] [ 10 ]; 
 char matrizC [] [ 4 ] = { '#' , '#' , '#' , '!' };
-float vetorF [ 5 ] [ 2 ] = { { 1.2 , 3.4 } , { 2.1 , 9.2 } , { 5.6 , 3.4 } , { 47.2 , 1.2 } , { 2.9 , 1.8 } };
-double vetorD [ 2 ] [ 10 ];
+float matrizF [ 5 ] [ 2 ] = { { 1.2 , 3.4 } , { 2.1 , 9.2 } , { 5.6 , 3.4 } , { 47.2 , 1.2 } , { 2.9 , 1.8 } };
+double matrizD [ 2 ] [ 10 ];
 
 // Preenchendo uma matriz de 'inteiros'
 for ( int l = 0 ; l < 3 ; l ++ ) for ( int c = 0 ; c < 10 ; c ++ )
    matrizI [ l ] [ c ] = c * 2; 
 
 // Printando o vetor de 'caracteres'
-for ( int i = 0 ; i < 4 ; i ++ ) printf ( "%c " , vetorC [ i ] );
+for ( int c = 0 ; c < 4 ; c ++ ) printf ( "%c " , matrizC [ 0 ] [ i ] );
 
 // Printando o vetor de 'floats'
-for ( int i = 0 ; i < 5 ; i ++ ) printf ( "%.1f " , vetorF [ i ] ); 
+for ( int l = 0 ; l < 5 ; l ++ ) for ( int c = 0 ; c < 2 ; c ++ )
+   printf ( "%.1f " , matrizF [ l ] [ c ] ); 
 
 // Preenchendo um vetor de 'doubles'
-for ( int i = 0 ; i < 10 ; i ++ ) vetorD [ i ] = i + ( 0.45 * i );
+for ( int l = 0 ; l < 2 ; l ++ ) for ( int c = 0 ; c < 10 ; c ++ )
+   matrizD [ l ] [ c ] = 0.45 * c;
 ```
 
 ### Estruturas/TADs
