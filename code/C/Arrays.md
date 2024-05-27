@@ -96,7 +96,6 @@ int main ( void )
 
 ### Ponteiros
 ```main.c
-
 /* ALOCAÇÃO DE PONTEIRO PARA VETOR DE INTEIROS */
 
 int main ( void )
@@ -108,7 +107,9 @@ int main ( void )
    int * vetor;
 
    // Inicializando um vetor de inteiros com 5 elementos
+   // e fazendo a checagem de erro
    vetor = ( int * ) malloc ( sizeof ( int ) * elements );
+   if ( NULL == vetor ) exit ( 1 );
 
    // Preenchendo o nosso vetor
    vetor [ 0 ] = 10;
@@ -119,6 +120,46 @@ int main ( void )
 
    // Podemos printar para testar
    for ( int i = 0 ; i < elements ; i ++ ) printf ( "%d " , vetor [ i ] );
+
+   // Após utilizarmos o nosso vetor, o desalocamos para liberar
+   // memória ( sempre faça isso quando alocar )
+   free ( vetor );
+}
+```
+```main.c
+/* ALOCAÇÃO DE PONTEIRO PARA VETOR DE STRING ( char ** ) */
+
+void adiciona_string ( char * texto_pra_adicionar , char * destino_de_adicao )
+{
+    
+}
+
+int main ( void )
+{
+   // Como sabemos uma string é um vetor de caracteres, portanto
+   // um vetor de strings seria uma matriz de caracteres ou vetor
+   // de vetor de caracteres, em um contexto de ponteiros teriamos
+   // a seguinte notação
+   char ** strings;
+   int elements = 5;
+   int max_size = 20;
+
+   // Fazemos a alocação para 5 strings no nosso vetor de strings
+   // e claro, fazemos a checagem de erro
+   strings = ( char ** ) malloc ( sizeof ( char * ) * elements );
+   if ( NULL == strings ) exit ( 1 );
+
+   // Agora alocamos o tamanho máximo de caracteres para cada índice
+   // do nosso vetor de strings
+   for ( int i = 0 ; i < elements ; i ++ )
+   {
+      strings [ i ] = ( char * ) malloc ( sizeof ( char ) * ( max_size + 1 ) );
+      if ( NULL == strings [ i ] ) exit ( 1 );
+   }
+
+   // Agora utilizando a função 'adiciona_string' iremos inserir
+   // as strings para cada índice do vetor
+   adiciona_string ( "Roberto Almeida Costa" , strings [ 0 ] );        
 
    // Após utilizarmos o nosso vetor, o desalocamos para liberar
    // memória ( sempre faça isso quando alocar )
