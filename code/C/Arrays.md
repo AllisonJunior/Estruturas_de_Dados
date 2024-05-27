@@ -71,7 +71,9 @@ int main ( void )
    // Printando o TAD pixels
    for ( int i = 0 ; i < 2 ; i ++ )
       printf ( "%d -> [%0.2d,%0.2d]\n" , i , pixels [ i ] . x , pixels [ i ] . y );
-      
+
+   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
    // Vetor de TAD sem typedef
    struct Pint random_test [ 10 ];
    struct Pint random_vars [] = 
@@ -80,7 +82,7 @@ int main ( void )
          { 231002202 , 33 , 32 } 
    };
 
-   // Preenchendo o TAD clientes
+   // Preenchendo o TAD random_test
    for ( int i = 0 ; i < 10 ; i ++ )
    {
       random_test [ i ] . id = 202200000 + ( i * 32 );
@@ -240,6 +242,54 @@ for ( int l = 0 ; l < 2 ; l ++ ) for ( int c = 0 ; c < 10 ; c ++ )
 
 ### Estruturas/TADs
 ```main.c
+// TAD: Representação de um ponto
+typedef struct { int x; int y; } Point;
+
+// TAD: Dados de uma pessoa
+struct Pint { int id; int valor; int capacity; };
+
+
+
+int main ( void )
+{
+   // Matriz de TAD com typedef 
+   Point cursor [ 2 ] [ 4 ] = { 0 };
+   Point pixels [] [ 3 ] = { { 1 , 2 , 3 } , { 40 , 100 } };
+
+   // Preenchendo o TAD cursor
+   for ( int l = 0 ; l < 2 ; l ++ ) for ( int c = 0 ; c < 4 ; c ++ )
+   {
+      cursor [ l ] [ c ] . x = c + 1;
+      cursor [ l ] [ c ] . y = c * 33;
+   }
+
+   // Printando o TAD pixels
+   for ( int l = 0 ; l < 2 ; l ++ ) for ( int c = 0 ; c < 3 ; c ++ )
+      printf ( "%d -> [%0.2d,%0.2d]\n" , l , pixels [ l ] [ c ] . x , pixels [ l ] [ c ] . y );
+
+   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+   // Vetor de TAD sem typedef
+   struct Pint random_test [ 1 ] [ 2 ];
+   struct Pint random_vars [ 3 ] [ 2 ] = 
+   { 
+         { { 202200111 , 12 , 33 } , { 202200132 , 14 , 22 } }, 
+         { { 202200077 , 67 , 21 } , { 202200131 , 44 , 82 } },
+         { { 202200001 , 85 , 81 } , { 202200147 , 32 , 98 } }
+   };
+
+   // Preenchendo o TAD random_test
+   for ( int c = 0 ; c < 2 ; c ++ )
+   {
+      random_test [ 0 ] [ c ] . id = 202200000 + ( c * 32 );
+      random_test [ 0 ] [ c ] . valor = c * ( 100 + 32 );
+      random_test [ 0 ] [ c ] . capacity = c * 10;
+   }   
+
+   // Printando o TAD random_vars
+   for ( int l = 0 ; l < 3 ; l ++ ) for ( int c = 0 ; c < 2 ; c ++ )
+      printf ( "{%d %d %d}\n" , random_vars [ l ] [ c ] . id , random_vars [ l ] [ c ] . valor , random_vars [ l ] [ c ] . capacity );
+}
 ```
 
 ### Ponteiros
