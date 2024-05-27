@@ -131,7 +131,13 @@ int main ( void )
 
 void adiciona_string ( char * texto_pra_adicionar , char * destino_de_adicao )
 {
-    
+    strncpy ( destino_de_adicao , texto_pra_adicionar , 20 );
+}
+
+void printa_strings ( char ** vetor_de_strings , int tamanho )
+{
+    for ( int i = 0 ; i < tamanho ; i ++ )
+       printf ( "{%d} - %s\n" , i , vetor_de_strings [ i ] );
 }
 
 int main ( void )
@@ -159,11 +165,20 @@ int main ( void )
 
    // Agora utilizando a função 'adiciona_string' iremos inserir
    // as strings para cada índice do vetor
-   adiciona_string ( "Roberto Almeida Costa" , strings [ 0 ] );        
+   adiciona_string ( "Roberto Almeida Costa" , strings [ 0 ] );
+   adiciona_string ( "Almeida Lima" , strings [ 1 ] );
+   adiciona_string ( "Aldemir Roberto Silva" , strings [ 2 ] );
+   adiciona_string ( "Valentina Cobra Dutra" , strings [ 3 ] );
+   adiciona_string ( "Ofensa Total Escola" , strings [ 4 ] );   
+
+   // Agora vamos ver todas as strings salvas, lembrando que só
+   // é salvo até 20 caracteres da string que foi passada por 
+   // causa da função 'strncpy', por questões óbvias de segurança
+   printa_strings ( strings , elements ); 
 
    // Após utilizarmos o nosso vetor, o desalocamos para liberar
    // memória ( sempre faça isso quando alocar )
-   free ( vetor );
+   free ( strings );
 }
 ```
 
