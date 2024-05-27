@@ -4,7 +4,8 @@ A linguagem de programação C não possui uma forma padrão de se implementar <
 
 --- 
 
-# Pilha Estática
+<h1 align="center"> Pilha Estática </h1>
+
 ```main.c
 // Constantes
 # define MAX_CAPACITY  4
@@ -98,7 +99,8 @@ int main ( void )
 }
 ```
 
-# Pilha Dinâmica
+<h1 align="center"> Pilha Dinâmica </h1>
+
 ```main.c
 # include <stdio.h>
 # include <stdlib.h>
