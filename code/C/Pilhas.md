@@ -5,8 +5,6 @@ A linguagem de programação C não possui uma forma padrão de se implementar <
 --- 
 
 # Pilha Estática
-
-### Implementação
 ```main.c
 // Constantes
 # define MAX_CAPACITY  4
@@ -101,8 +99,6 @@ int main ( void )
 ```
 
 # Pilha Dinâmica
-
-### Implementação
 ```main.c
 # include <stdio.h>
 # include <stdlib.h>
