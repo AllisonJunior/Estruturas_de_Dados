@@ -6,7 +6,7 @@ Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode a
 
 ### Tipos Abstratos de Dados
 
-| **LINGUAGENS**| Pilhas | Filas | Listas Ligadas | Árvores | Grafos |
+| **LINGUAGENS**| Pilhas | Filas | Listas Encadeadas | Árvores | Grafos |
 |:----------:|:------:|:-----:|:--------------:|:-------:|:------:|
 | *C*          | <a href="code/C/Pilhas.md" title="Implementação de pilhas na linguagem c.">**Visualizar**</a> | <a href="code/C/Filas.md" title="Implementação de filas na linguagem c.">**Visualizar**</a> | <a href="code/C/Listas Ligadas.md" title="Implementação de listas ligadas na linguagem c.">**Visualizar**</a> | <a href="code/C/Árvores.md" title="Implementação de árvores na linguagem c.">**Visualizar**</a> | <a href="code/C/Grafos.md" title="Implementação de grafos na linguagem c.">**Visualizar**</a> |
 | *C++*        | :x: | :x: | :x: | :x: | :x: |
