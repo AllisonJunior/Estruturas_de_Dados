@@ -1,6 +1,6 @@
 # Listas Encadeadas
 
-A linguagem de programação C não possui uma forma padrão de se implementar <a href="Listas Encadeadas.md" title="sequência de nós">**listas encadeadas**</a>, com isso utilizamos um <a href="Listas Encadeadas.md" title="Tipo Abstrato de Dado: Struct">**TAD**</a> para chegar a esse resultado, utilizando um modelo de implementação sempre dinâmica, pelo fato dela poder ser encadeada ou duplamente encadeada, a diferença se resume ao uso de um <a href="Listas Encadeadas.md" title="Ponteiro para um dado similar"> **Node** </a> ou mais, porque no caso da encadeada padrão, só temos o valor e o ponteiro para o próximo dado e na duplamente encadeada temos um ponteiro para o dado anterior e o próximo.
+A linguagem de programação C não possui uma forma padrão de se implementar <a href="Listas Encadeadas.md" title="sequência de nós">**listas encadeadas**</a>, com isso utilizamos um <a href="Listas Encadeadas.md" title="Tipo Abstrato de Dado: Struct">**TAD**</a> para chegar a esse resultado sempre na forma dinâmica. A lista pode ser encadeada ou duplamente encadeada, a diferença se resume ao uso de um <a href="Listas Encadeadas.md" title="Ponteiro para um dado similar"> **Node** </a> ou mais, onde no caso da encadeada padrão, só temos o valor e o ponteiro para o próximo dado e já na duplamente encadeada temos um ponteiro para o dado anterior e o próximo.
 
 --- 
 
