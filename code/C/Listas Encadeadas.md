@@ -242,6 +242,7 @@ void removeIt ( Lista * ref , double valor )
     else ref -> frente = current -> proximo;
     
     if ( current -> proximo != NULL ) current -> proximo -> anterior = current -> anterior;
+
     free ( current );
 }
 
