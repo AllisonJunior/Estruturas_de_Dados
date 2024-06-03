@@ -115,6 +115,7 @@ void printList ( Lista * ref )
          printf ( "%c " , current -> valor );
          current = current -> proximo;
     }
+
     printf ( "\n" );
 }
 
