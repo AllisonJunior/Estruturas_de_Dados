@@ -1,6 +1,7 @@
 # Árvores
 
 Para se implementar uma <a href="Árvores.md" title="elementos organizados não sequêncialmente mais sim em ramos">**árvore binária**</a>, utilizamos a ideia de <a href="Árvores.md" title="Vulgo Node">ramos</a>, onde cada ramo tem no máximo dois ramos e cada ramo tem um valor, ou um dado e referência para os próximos ramos do atual. Por isso aqui está disponibilizada uma implementação simples com algumas funções de ajuda.
+
 --- 
 
 # Árvore Binária
