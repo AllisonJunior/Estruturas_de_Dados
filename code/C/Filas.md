@@ -112,6 +112,102 @@ int main ( void )
 
 # Fila Dinâmica
 ```main.c
+# include <stdio.h>
+# include <stdlib.h>
+
+
+
+// Aqui temos um TAD que referência um
+// Nó de uma Fila, ou seja, a fila será
+// composta inteiramente desse TAD abaixo
+// o mesmo contém, um ponteiro para um dado
+// próximo de mesmo tipo e um valor comum
+// nesse caso usaremos um inteiro
+typedef struct Node 
+{
+       int valor;
+       struct Node * proximo;
+} 
+Node;
+
+// Aqui temos a nosso TAD de fila dinâmica, que 
+// consiste em 2 ponteiros, um que referência a 
+// frente e outro o final, para simularmos o efeito
+// de quem estiver na frente sair primeiro
+typedef struct { Node * frente , * final; } Fila;
+
+// Função para inicializar uma fila atráves de referência
+void initQueue ( Fila * ref ) { ref -> frente = NULL; ref -> final = NULL; }
+
+// Função para checar se a fila está vazia
+int isEmpty ( Fila  * ref ) { return ( ref -> frente == NULL ); }
+
+// Função para enfileirar um valor
+void enqueue ( Fila * ref , int valor_novo ) 
+{
+    Node * new_Node = ( Node * ) malloc ( sizeof ( Node ) );
+    if ( NULL == new_Node ) { printf ( "\n- Alocação de memória para o Node falhou!.\n" ); return; }
+    
+    new_Node -> valor = valor_novo;
+    new_Node -> proximo = NULL;
+    
+    if ( isEmpty ( ref ) ) { ref -> frente = new_Node; ref -> final = new_Node; }
+    else                   { ref -> final -> proximo = new_Node; ref -> final = new_Node; }
+}
+
+// Função para desinfileirar o valor da frente da fila
+int dequeue ( Fila * ref ) 
+{
+    if ( isEmpty ( ref ) ) { printf ("\n- A Fila está vazia!\n"); return -1; }
+    
+    int valor = ref -> frente -> valor;
+    Node * temporario = ref -> frente;
+    
+    ref -> frente = ref -> frente -> proximo;
+    if ( NULL == ref -> frente ) ref -> final = NULL;
+    
+    free ( temporario );
+    
+    return valor;
+}
+
+// Função para printar a fila
+void printQueue ( Fila * ref ) 
+{
+    if ( isEmpty ( ref ) ) { printf ( "\n- A fila está vazia.\n" ); return; }
+    
+    printf ( "- Fila: " );
+
+    Node * atual = ref -> frente;
+
+    while ( atual != NULL ) 
+    {
+         printf ( "%d ", atual -> valor );
+         atual = atual -> proximo;
+    }
+
+    printf ( "\n" );
+}
+
+int main ( void ) 
+{
+    // Criamos o TAD fila e em seguida o inicializamos
+    Fila queue;
+    initQueue ( &queue );
+
+    // Agora fazemos algumas inserções para testarmos se está tudo ok
+    enqueue ( &queue , 10 );
+    enqueue ( &queue , 20 );
+    enqueue ( &queue , 30 );
+    enqueue ( &queue , 40 );
+    enqueue ( &queue , 50 );
+    printQueue ( &queue );
+    
+    // Por fim vamos remover alguns elementos e ver como ficou a fila
+    printf ( "\n- Removido: %d\n", dequeue ( &queue ) );
+    printf ( "- Removido: %d\n\n", dequeue ( &queue ) );
+    printQueue ( &queue );
+}
 ```
 
 <h3 align="center"> <a href="#filas" title="Voltar ao topo"> Retornar ao topo </a> </h3>
