@@ -12,6 +12,6 @@ A linguagem de programação C não possui uma forma padrão de se implementar <
 ```main.c
 ```
 
-<h3 align="center"> <a href="#Listas Encadeadas" title="Voltar ao topo"> Retornar ao topo </a> </h3>
+<h3 align="center"> <a href="#listas-encadeadas" title="Voltar ao topo"> Retornar ao topo </a> </h3>
 <h3 align="center"> <a href="https://github.com/AllisonJunior/Estruturas_de_Dados" title="Voltar ao menu principal"> Retornar a página principal </a> </h3>
 
