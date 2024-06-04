@@ -12,6 +12,7 @@ Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode a
 | *C++*        | :x: | :x: | :x: | :x: | :x: |
 | *Java*       | :x: | :x: | :x: | :x: | :x: |
 | *Python*     | :x: | :x: | :x: | :x: | :x: |
+| *Lua*        | :x: | :x: | :x: | :x: | :x: |
 
 ### Algoritmos de Ordenação
 
@@ -21,3 +22,4 @@ Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode a
 | *C++*        | :x: | :x: | :x: | :x: | :x: | :x: |
 | *Java*       | :x: | :x: | :x: | :x: | :x: | :x: |
 | *Python*     | :x: | :x: | :x: | :x: | :x: | :x: |
+| *Lua*     | :x: | :x: | :x: | :x: | :x: | :x: |
