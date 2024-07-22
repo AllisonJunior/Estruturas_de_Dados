@@ -14,6 +14,8 @@ Caso deseje entender mais sobre os conceitos disponibilizados aqui, você pode a
 | *Python*     | :x: | :x: | :x: | :x: | :x: |
 | *Lua*        | :x: | :x: | :x: | :x: | :x: |
 
+![alt text](image.png)
+
 ### Algoritmos de Ordenação
 
 | **LINGUAGENS**| Bubble Sort | Insertion Sort | Selection Sort | Merge Sort | Quick Sort | Heap Sort |
